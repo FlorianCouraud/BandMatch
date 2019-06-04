@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_154624) do
+ActiveRecord::Schema.define(version: 2019_06_04_095454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,18 +22,13 @@ ActiveRecord::Schema.define(version: 2019_06_03_154624) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "link2"
+    t.string "link1"
     t.index ["user_id"], name: "index_bands_on_user_id"
   end
 
   create_table "instruments", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "media", force: :cascade do |t|
-    t.string "site"
-    t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -56,17 +51,6 @@ ActiveRecord::Schema.define(version: 2019_06_03_154624) do
     t.datetime "updated_at", null: false
     t.index ["receiver_id"], name: "index_messages_on_receiver_id"
     t.index ["sender_id"], name: "index_messages_on_sender_id"
-  end
-
-  create_table "portfolios", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "band_id"
-    t.bigint "media_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["band_id"], name: "index_portfolios_on_band_id"
-    t.index ["media_id"], name: "index_portfolios_on_media_id"
-    t.index ["user_id"], name: "index_portfolios_on_user_id"
   end
 
   create_table "styles", force: :cascade do |t|
@@ -102,6 +86,8 @@ ActiveRecord::Schema.define(version: 2019_06_03_154624) do
     t.string "age"
     t.string "address"
     t.string "avatar"
+    t.string "link1"
+    t.string "link2"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -111,9 +97,6 @@ ActiveRecord::Schema.define(version: 2019_06_03_154624) do
   add_foreign_key "members", "users"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"
-  add_foreign_key "portfolios", "bands"
-  add_foreign_key "portfolios", "media", column: "media_id"
-  add_foreign_key "portfolios", "users"
   add_foreign_key "styles", "bands"
   add_foreign_key "styles", "users"
   add_foreign_key "user_instruments", "instruments"
