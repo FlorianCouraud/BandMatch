@@ -1,1 +1,32 @@
-// Specific CSS for your home-page
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  padding-top: 10px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.banner p {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.button-join {
+text-align: center;
+border-radius: 5px;
+width: 200px;
+display: block;
+margin : auto;
+}
