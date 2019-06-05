@@ -38,6 +38,23 @@
         </div>
       </div>
 
+      <div class="card-trip m-3">
+
+      <div class="card-trip-infos">
+            <div class="container">
+              <h2>Styles</h2>
+              <hr>
+              <ul id="instruments">
+              <% @styles.each do |style| %>
+              <li><%= style.style.name %></li>
+              <% end  %>
+              </ul>
+
+            </div>
+
+        </div>
+      </div>
+
 
     </div>
   </div>

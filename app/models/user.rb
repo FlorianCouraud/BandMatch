@@ -7,8 +7,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :instruments, through: :user_instruments
-  has_many :styles
-  has_many :bands
+  has_many :styles, through: :user_styles
+  has_many :bands, through: :members
   has_many :messages
 
   validates :email, presence: true, uniqueness: true

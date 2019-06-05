@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_091506) do
+ActiveRecord::Schema.define(version: 2019_06_05_192812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "band_styles", force: :cascade do |t|
+    t.bigint "band_id"
+    t.bigint "style_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["band_id"], name: "index_band_styles_on_band_id"
+    t.index ["style_id"], name: "index_band_styles_on_style_id"
+  end
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
@@ -55,12 +64,8 @@ ActiveRecord::Schema.define(version: 2019_06_05_091506) do
 
   create_table "styles", force: :cascade do |t|
     t.string "name"
-    t.bigint "user_id"
-    t.bigint "band_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["band_id"], name: "index_styles_on_band_id"
-    t.index ["user_id"], name: "index_styles_on_user_id"
   end
 
   create_table "user_instruments", force: :cascade do |t|
@@ -71,6 +76,15 @@ ActiveRecord::Schema.define(version: 2019_06_05_091506) do
     t.datetime "updated_at", null: false
     t.index ["instrument_id"], name: "index_user_instruments_on_instrument_id"
     t.index ["user_id"], name: "index_user_instruments_on_user_id"
+  end
+
+  create_table "user_styles", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "style_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["style_id"], name: "index_user_styles_on_style_id"
+    t.index ["user_id"], name: "index_user_styles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -93,13 +107,15 @@ ActiveRecord::Schema.define(version: 2019_06_05_091506) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "band_styles", "bands"
+  add_foreign_key "band_styles", "styles"
   add_foreign_key "bands", "users"
   add_foreign_key "members", "bands"
   add_foreign_key "members", "users"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"
-  add_foreign_key "styles", "bands"
-  add_foreign_key "styles", "users"
   add_foreign_key "user_instruments", "instruments"
   add_foreign_key "user_instruments", "users"
+  add_foreign_key "user_styles", "styles"
+  add_foreign_key "user_styles", "users"
 end

@@ -40,6 +40,36 @@ Instrument.create(name: "Trombone")
 violin = Instrument.create(name: "Violin")
 puts "Finished instrument creation"
 
+puts "Creating styles"
+electronic = Style.create!(name: "Electronic")
+rock = Style.create!(name: "Rock")
+jazz = Style.create!(name: "Jazz")
+dubstep = Style.create!(name: "Dubstep")
+blues = Style.create!(name: "Blues")
+techno = Style.create!(name: "Techno")
+jazz = Style.create!(name: "Jazz")
+country = Style.create!(name: "Country")
+electro = Style.create!(name: "Electro")
+indie = Style.create!(name: "Indie Rock")
+pop = Style.create!(name: "Pop")
+puts "Finished style creation"
+
+puts "Creating the association between user and styles"
+UserStyle.create!(user_id: user1.id, style_id: jazz.id)
+UserStyle.create!(user_id: user1.id, style_id: pop.id)
+UserStyle.create!(user_id: user1.id, style_id: country.id)
+UserStyle.create!(user_id: user2.id, style_id: electronic.id)
+UserStyle.create!(user_id: user2.id, style_id: indie.id)
+UserStyle.create!(user_id: user2.id, style_id: blues.id)
+UserStyle.create!(user_id: user3.id, style_id: rock.id)
+UserStyle.create!(user_id: user3.id, style_id: pop.id)
+UserStyle.create!(user_id: user3.id, style_id: techno.id)
+UserStyle.create!(user_id: user4.id, style_id: indie.id)
+UserStyle.create!(user_id: user4.id, style_id: pop.id)
+UserStyle.create!(user_id: user4.id, style_id: electro.id)
+puts "Finised association between user and styles"
+
+
 puts "Creating the association between user and instrument"
 UserInstrument.create!(user_id: user1.id, instrument_id: banjo.id, years_of_experience: "3")
 UserInstrument.create!(user_id: user1.id, instrument_id: bassguitar.id, years_of_experience: "2")
@@ -49,8 +79,9 @@ UserInstrument.create!(user_id: user3.id, instrument_id: violin.id, years_of_exp
 UserInstrument.create!(user_id: user3.id, instrument_id: harmonica.id, years_of_experience: "4")
 UserInstrument.create!(user_id: user4.id, instrument_id: piano.id, years_of_experience: "6")
 UserInstrument.create!(user_id: user4.id, instrument_id: guitar.id, years_of_experience: "2")
-puts "Finished"
+puts "Finished association between user and instrument"
 
 
 
-puts "End, All is good !!"
+
+puts "All good, ready to go !!"
