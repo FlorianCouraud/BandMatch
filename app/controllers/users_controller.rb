@@ -6,6 +6,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @instruments = UserInstrument.where(user_id: @user)
+
   end
 
   def edit

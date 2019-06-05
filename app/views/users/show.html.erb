@@ -14,12 +14,31 @@
 
 
             <h2><%= current_user.email %></h2>
-             <h2><%= current_user.age %></h2>
+             <h2><%= current_user.age %> ans</h2>
 
             </div>
 
         </div>
       </div>
+
+      <div class="card-trip m-3">
+
+      <div class="card-trip-infos">
+            <div class="container">
+              <h2>Instruments</h2>
+              <hr>
+              <ul id="instruments">
+              <% @instruments.each do |instrument| %>
+              <li><%= instrument.instrument.name %></li>
+              <% end  %>
+              </ul>
+
+            </div>
+
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>
