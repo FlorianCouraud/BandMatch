@@ -12,12 +12,11 @@ User.destroy_all
 
 
 puts "Creating users ..."
-
-User.create(first_name: "Wilfried", last_name: "Bessovi", address: "64 avenue du Prado, Marseille", email: "wbsvnet@gmail.com", password: "123456")
-User.create(first_name: "Jessica", last_name: "Fiedler", address: "49 rue de la Republique, Marseille", email: "jess.fiedler83860@gmail.com", password: "123456")
-User.create(first_name: "Florian", last_name: "Couraud", address: "12 rue de Rome, Marseille", email: "f.couraud13@gmail.com", password: "123456")
-User.create(first_name: "Brice", last_name: "Bickelmann", address: "5 rue Breteuil, Marseille", email: "bickelmann.b@gmail.com", password: "123456")
-User.create(first_name: "Jimmy", last_name: "Hendrix", address: "127 avenue du Prado, Marseille", email: "jhendrix@gmail.com", password: "123456")
-User.create(first_name: "Eric", last_name: "Clapton", address: "12 boulevard Vauban, Marseille", email: "eclapton@gmail.com", password: "123456")
+User.create(first_name: "Wilfried", last_name: "Bessovi", age: "30", address: "64 avenue du Prado, Marseille", email: "wbsvnet@gmail.com", password: "123456")
+User.create(first_name: "Jessica", last_name: "Fiedler", age: "25", address: "49 rue de la Republique, Marseille", email: "jess.fiedler83860@gmail.com", password: "123456")
+User.create(first_name: "Florian", last_name: "Couraud", age: "27", address: "12 rue de Rome, Marseille", email: "f.couraud13@gmail.com", password: "123456")
+User.create(first_name: "Brice", last_name: "Bickelmann", age: "25", address: "5 rue Breteuil, Marseille", email: "bickelmann.b@gmail.com", password: "123456")
+User.create(first_name: "Jimmy", last_name: "Hendrix", age: "27", address: "127 avenue du Prado, Marseille", email: "jhendrix@gmail.com", password: "123456")
+User.create(first_name: "Eric", last_name: "Clapton", age: "52", address: "12 boulevard Vauban, Marseille", email: "eclapton@gmail.com", password: "123456")
 
 puts "Finished"

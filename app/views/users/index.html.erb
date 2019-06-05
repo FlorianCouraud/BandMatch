@@ -1,3 +1,32 @@
-<h1><% @users.each do |user| %></h1>
-<h2><%= link_to user.first_name, user_path(user) %></h2>
-<% end %>
+<div class="paddingtop-results">
+<div class="text-center m-3">
+  <h2>Here are the musicians available near you!</h2>
+  <hr>
+</div>
+</div>
+<div class="container">
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-8">
+    <div class="cards">
+      <% @users.each do |user| %>
+        <div class="card-product">
+          <img src=<%= user.photo %> >
+            <div class="card-product-infos">
+              <h2><%= link_to user.first_name, user_path(user) %> <%= link_to user.last_name, user_path(user) %></h2>
+              <p><%= user.age %> ans</p>
+            </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+    <div class="col-12 col-lg-4">
+      <div
+        id="map"
+        style="width: 100%;
+        height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>
