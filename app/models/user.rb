@@ -10,4 +10,8 @@ class User < ApplicationRecord
   has_many :styles
   has_many :bands
   has_many :messages
+
+  validates :email, presence: true, uniqueness: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end
