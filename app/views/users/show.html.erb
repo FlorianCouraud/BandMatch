@@ -1,3 +1,25 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<%= cl_image_tag @user.photo %>
+<div class="row justify-content-center my-4">
+  <div class="col-12 col-lg-7">
+    <div class="card-trip m-3">
+      <img src="https://images.pexels.com/photos/2104742/pexels-photo-2104742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+      <div id="avatar-card">
+        <img src='https://ca.slack-edge.com/T02NE0241-UHW32V2J1-d3d98e55b2bf-48' class="card-trip-user avatar-bordered"/>
+      </div>
+      <div class="card-trip-infos">
+            <div class="container text-center">
+              <h2><%= current_user.first_name %></h2>
+
+
+            <h2><%= current_user.last_name %></h2>
+
+
+            <h2><%= current_user.email %></h2>
+             <h2><%= current_user.age %></h2>
+
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
