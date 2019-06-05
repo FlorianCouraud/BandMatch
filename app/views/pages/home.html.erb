@@ -3,8 +3,10 @@
     <h1><strong>Welcome to BandMatch !</strong></h1>
     <div class="button-join">
       <p>Let's play together !</p>
-      <a class="btn btn-flat btn-outline-light btn-block" href="#">Join us now</a>
+        <%= link_to "Join us now", new_user_session_path, class: "nav-link btn btn-outline-light btn-block" %>
+
     <div class="btn-group dropright m-4">
+
       <button class="btn btn-outline-light type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Instrument ➣
       </button>
