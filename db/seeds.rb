@@ -28,7 +28,7 @@ user3.save!
 user4 = User.create!(first_name: "Brice", last_name: "Bickelmann", age: "25", address: "5 avenue des champs-élysées", city: "Paris", email: "bickelmann.b@gmail.com", password: "123456")
 user4.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
 user4.save!
-user5 = User.create!(first_name: "Jimmy", last_name: "Hendrix", age: "19", address: "127 avenue du Prado", city:"Marseille" email: "jhendrix@gmail.com", password: "123456")
+user5 = User.create!(first_name: "Jimmy", last_name: "Hendrix", age: "19", address: "127 avenue du Prado", city:"Marseille", email: "jhendrix@gmail.com", password: "123456")
 user5.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
 user5.save!
 user6 = User.create!(first_name: "Eric", last_name: "Clapton", age: "52", address: "venice beach",city:"Miami", email: "eclapton@gmail.com", password: "123456")
