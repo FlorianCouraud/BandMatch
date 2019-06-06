@@ -1,4 +1,4 @@
 class Style < ApplicationRecord
-  belongs_to :user
-  belongs_to :band
+ has_many :users, through: :user_styles
+ has_many :bands, through: :band_styles
 end
