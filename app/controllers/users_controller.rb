@@ -3,7 +3,9 @@ class UsersController < ApplicationController
 
   def index
     if params[:query].present?
-      @users = User.search_by_city("city ILIKE ?", "%#{params[:query]}%")
+      a = params[:query].split(",").first.to_s
+          @users = User.where("city ILIKE ?", "%#{a}%")
+
     else
       @users = User.all
     end

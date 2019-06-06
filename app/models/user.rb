@@ -2,11 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   include PgSearch
-
-    pg_search_scope :search_by_city,
-      against: [:city],
-      using: {
-        tsearch: { prefix: true }      }
+  pg_search_scope :search_by_city, against: [:city], using: { tsearch: { prefix: true } }
 
   mount_uploader :photo, PhotoUploader
   devise :database_authenticatable, :registerable,
@@ -20,4 +16,5 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :city, presence: true
 end
