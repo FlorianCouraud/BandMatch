@@ -3,18 +3,18 @@
     <div class="card-trip m-3">
       <img src="https://images.pexels.com/photos/2104742/pexels-photo-2104742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
       <div id="avatar-card">
-        <%= cl_image_tag current_user.photo, class: "card-trip-user avatar-bordered" %>
+        <%= cl_image_tag @user.photo, class: "card-trip-user avatar-bordered" %>
       </div>
       <div class="card-trip-infos">
             <div class="container text-center">
-              <h6><%= current_user.first_name %></h6>
+              <h6><%= @user.first_name %></h6>
 
 
-            <h3><%= current_user.last_name %></h3>
+            <h3><%= @user.last_name %></h3>
 
 
-            <p><%= current_user.email %></p>
-             <p><%= current_user.age %> ans</p>
+            <p><%= @user.email %></p>
+             <p><%= @user.age %> ans</p>
 
             </div>
 
