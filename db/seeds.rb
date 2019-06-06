@@ -15,6 +15,7 @@ Instrument.destroy_all
 
 puts "Beginning"
 puts "Creating users ..."
+
 user1 = User.create!(first_name: "Wilfried", last_name: "Bessovi", age: "30", address: "64 avenue du Prado, Marseille", email: "wbsvnet@gmail.com", password: "123456")
 user1.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
 user1.save!
@@ -51,8 +52,6 @@ user11.save!
 user12 = User.create!(first_name: "Simone", last_name: "Simmons", age: "21", address: "21 Allée du Moulin Pinard, Limoges", email: "simsimm@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
 user12.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
 user12.save!
-
-
 puts "Finished user creation"
 
 puts "Creating instruments..."
