@@ -22,7 +22,7 @@ user2.save!
 user3 = User.create!(first_name: "Florian", last_name: "Couraud", age: "27", address: "12 rue de Rome, Marseille", email: "f.couraud13@gmail.com", password: "123456")
 user4 = User.create!(first_name: "Brice", last_name: "Bickelmann", age: "25", address: "5 avenue des champs-élysées, Paris", email: "bickelmann.b@gmail.com", password: "123456")
 user5 = User.create!(first_name: "Jimmy", last_name: "Hendrix", age: "27", address: "127 avenue du Prado, Marseille", email: "jhendrix@gmail.com", password: "123456")
-user6 = User.create!(first_name: "Eric", last_name: "Clapton", age: "52", address: "venice beach, miami", email: "eclapton@gmail.com", password: "123456")
+user6 = User.create!(first_name: "Eric", last_name: "Clapton", age: "52", address: "venice beach, Miami", email: "eclapton@gmail.com", password: "123456")
 user7 = User.create!(first_name: "Kurt", last_name: "Cobain", age: "27", address: "164 rue paradis, Marseille", email: "kcobain@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
 puts "Finished user creation"
 
