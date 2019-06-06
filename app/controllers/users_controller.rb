@@ -1,26 +1,26 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @users = User.all
+    if params[:query].present?
+      User.search_by_address(address: params[:query])
+    else
+      @users = User.all
+    end
   end
 
   def show
     @user = User.find(params[:id])
     @instruments = UserInstrument.where(user_id: @user)
     @styles = UserStyle.where(user_id: @user)
-
   end
 
   def edit
-
     @user = User.find(params[:id])
   end
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
-      redirect_to user_path
-    end
+    redirect_to user_path if @user.update(user_params)
   end
 
   private
