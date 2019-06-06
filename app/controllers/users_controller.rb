@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     if params[:query].present?
-      User.search_by_address(address: params[:query])
+      @users = User.search_by_city("city ILIKE ?", "%#{params[:query]}%")
     else
       @users = User.all
     end

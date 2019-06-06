@@ -3,8 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   include PgSearch
 
-    pg_search_scope :search_by_address,
-      against: [ :address ],
+    pg_search_scope :search_by_city,
+      against: [:city],
       using: {
         tsearch: { prefix: true }      }
 
