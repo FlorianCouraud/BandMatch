@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Member.destroy_all
 Band.destroy_all
 Message.destroy_all
 UserInstrument.destroy_all
@@ -16,42 +17,42 @@ Instrument.destroy_all
 puts "Beginning"
 puts "Creating users ..."
 
-user1 = User.new(first_name: "Wilfried", last_name: "Bessovi", age: "30", address: "64 avenue du Prado", city: "Marseille", email: "wbsvnet@gmail.com", password: "123456")
-user1.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user1 = User.new(first_name: "Wilfried", last_name: "Bessovi", age: "30", address: "64 avenue du Prado, Marseille", city: "Marseille", email: "wbsvnet@gmail.com", password: "123456")
+user1.remote_photo_url = "https://images.pexels.com/photos/2232981/pexels-photo-2232981.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user1.save!
-user2 = User.new(first_name: "Jessica", last_name: "Fiedler", age: "25", address: "49 rue de la Republique", city: "Marseille", email: "jess.fiedler83860@gmail.com", password: "123456")
-user2.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user2 = User.new(first_name: "Jessica", last_name: "Fiedler", age: "25", address: "49 rue de la Republique, Marseille", city: "Marseille", email: "jess.fiedler83860@gmail.com", password: "123456")
+user2.remote_photo_url = "https://images.pexels.com/photos/2169434/pexels-photo-2169434.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user2.save!
-user3 = User.new(first_name: "Florian", last_name: "Couraud", age: "27", address: "12 rue de Rome", city: "Marseille", email: "f.couraud13@gmail.com", password: "123456")
-user3.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user3 = User.new(first_name: "Florian", last_name: "Couraud", age: "27", address: "12 rue de Rome, Marseille", city: "Marseille", email: "f.couraud13@gmail.com", password: "123456")
+user3.remote_photo_url = "https://images.pexels.com/photos/2287252/pexels-photo-2287252.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user3.save!
-user4 = User.new(first_name: "Brice", last_name: "Bickelmann", age: "25", address: "5 avenue des champs-élysées", city: "Paris", email: "bickelmann.b@gmail.com", password: "123456")
-user4.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user4 = User.new(first_name: "Brice", last_name: "Bickelmann", age: "25", address: "5 avenue des champs-élysées, Paris", city: "Paris", email: "bickelmann.b@gmail.com", password: "123456")
+user4.remote_photo_url = "https://images.pexels.com/photos/2118953/pexels-photo-2118953.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user4.save!
-user5 = User.new(first_name: "Jimmy", last_name: "Hendrix", age: "19", address: "127 avenue du Prado", city:"Marseille", email: "jhendrix@gmail.com", password: "123456")
-user5.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user5 = User.new(first_name: "Jimmy", last_name: "Hendrix", age: "19", address: "127 avenue du Prado, Marseille", city:"Marseille", email: "jhendrix@gmail.com", password: "123456")
+user5.remote_photo_url = "https://images.pexels.com/photos/2128819/pexels-photo-2128819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 user5.save!
-user6 = User.new(first_name: "Eric", last_name: "Clapton", age: "52", address: "venice beach",city:"Miami", email: "eclapton@gmail.com", password: "123456")
-user6.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user6 = User.new(first_name: "Eric", last_name: "Clapton", age: "52", address: "venice beach, Miami",city:"Miami", email: "eclapton@gmail.com", password: "123456")
+user6.remote_photo_url = "https://images.pexels.com/photos/2220851/pexels-photo-2220851.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user6.save!
-user7 = User.new(first_name: "Kurt", last_name: "Cobain", age: "27", address: "444 Brickell Ave", city: "Miami", email: "kcobain@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
-user7.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user7 = User.new(first_name: "Kurt", last_name: "Cobain", age: "27", address: "444 Brickell Ave, Miami", city: "Miami", email: "kcobain@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
+user7.remote_photo_url = "https://images.pexels.com/photos/2128815/pexels-photo-2128815.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user7.save!
-user8 = User.new(first_name: "Romain", last_name: "Trickster", age: "22", address: "5 cours Mirabeau", city: "Aix-en-Provence", email: "tricksters@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
-user8.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user8 = User.new(first_name: "Romain", last_name: "Trickster", age: "22", address: "5 cours Mirabeau, Aix-en-Provence", city: "Aix-en-Provence", email: "tricksters@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
+user8.remote_photo_url = "https://images.pexels.com/photos/2190377/pexels-photo-2190377.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user8.save!
 
-user9 = User.new(first_name: "Raphael", last_name: "Clement", age: "31", address: "142 Boulevard de la République", city: "La Ciotat", email: "rclement@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
-user9.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user9 = User.new(first_name: "Raphael", last_name: "Clement", age: "31", address: "142 Boulevard de la République, La Ciotat", city: "La Ciotat", email: "rclement@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
+user9.remote_photo_url = "https://images.pexels.com/photos/2267018/pexels-photo-2267018.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 user9.save!
-user10 = User.new(first_name: "Rose", last_name: "Cobain", age: "27", address: "164 rue paradis", city:"Marseille", email: "Rose-dc@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
-user10.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user10 = User.new(first_name: "Rose", last_name: "Cobain", age: "27", address: "164 rue paradis, Marseille", city:"Marseille", email: "Rose-dc@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
+user10.remote_photo_url = "https://images.pexels.com/photos/2088366/pexels-photo-2088366.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user10.save!
-user11 = User.new(first_name: "Thomas", last_name: "MP", age: "24", address: "102 rue du cimetière", city:"Saint Maximin La Sainte Baume", email: "thomas-mp@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
-user11.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user11 = User.new(first_name: "Thomas", last_name: "MP", age: "24", address: "102 rue du cimetière, Saint Maximin La Sainte Baume", city:"Saint Maximin La Sainte Baume", email: "thomas-mp@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
+user11.remote_photo_url = "https://images.pexels.com/photos/2118950/pexels-photo-2118950.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user11.save!
-user12 = User.new(first_name: "Simone", last_name: "Simmons", age: "21", address: "21 Allée du Moulin Pinard", city:"Limoges", email: "simsimm@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
-user12.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
+user12 = User.new(first_name: "Simone", last_name: "Simmons", age: "21", address: "21 Allée du Moulin Pinard, Limoges", city:"Limoges", email: "simsimm@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
+user12.remote_photo_url = "https://images.pexels.com/photos/2146525/pexels-photo-2146525.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user12.save!
 puts "Finished user creation"
 
