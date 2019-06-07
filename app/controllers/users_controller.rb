@@ -2,10 +2,12 @@ class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    if params[:query].present?
-      @users = User.search_by_city("city ILIKE ?", "%#{params[:query]}%")
-    else
-      @users = User.all
+    @users = User.where.not(latitude: nil, longitude: nil)
+    @markers = @users.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude
+      }
     end
   end
 
