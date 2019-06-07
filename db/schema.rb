@@ -62,12 +62,8 @@ ActiveRecord::Schema.define(version: 2019_06_07_051507) do
 
   create_table "styles", force: :cascade do |t|
     t.string "name"
-    t.bigint "user_id"
-    t.bigint "band_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["band_id"], name: "index_styles_on_band_id"
-    t.index ["user_id"], name: "index_styles_on_user_id"
   end
 
   create_table "user_instruments", force: :cascade do |t|
@@ -118,8 +114,6 @@ ActiveRecord::Schema.define(version: 2019_06_07_051507) do
   add_foreign_key "members", "users"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"
-  add_foreign_key "styles", "bands"
-  add_foreign_key "styles", "users"
   add_foreign_key "user_instruments", "instruments"
   add_foreign_key "user_instruments", "users"
   add_foreign_key "user_styles", "styles"
