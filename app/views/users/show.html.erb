@@ -3,7 +3,11 @@
     <div class="card-trip m-3">
       <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500">
       <div id="avatar-card">
-        <%= cl_image_tag @user.photo, class: "card-trip-user avatar-bordered" %>
+       <!--  <%= cl_image_tag @user.photo, class: "card-trip-user avatar-bordered" %> -->
+       <%= cl_image_tag @user.photo, :transformation=>[
+                  {:width=>250, :height=>250, :gravity=>"face",  :crop=>"crop"},
+                  {:width=>200}
+                ] %>
       </div>
       <div class="card-trip-infos">
             <div class="container text-center">
@@ -18,7 +22,9 @@
 
             </div>
 
+
         </div>
+
       </div>
 
 <div class="card-trip m-3">
