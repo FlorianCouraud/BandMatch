@@ -1,8 +1,9 @@
 <div class="paddingtop-results">
-  <div class="text-center m-3">
-    <h2>Here are the musicians available near you!</h2>
-    <hr>
-  </div>
+<div class="text-center my-5">
+  <h2>Here are the musicians available near you!</h2>
+  <hr>
+</div>
+
 </div>
 <div class="container">
   <div class="row justify-content-center">
@@ -14,9 +15,9 @@
             <div class="card-product-infos">
               <h2><%= link_to user.first_name, user_path(user) %> <%= link_to user.last_name %></h2>
               <hr>
-              <p><%= user.age %> ans</p>
-              <%= user.city %>
-              <%= user.id %>
+              <p><%= user.age %> yrs</p>
+              <p><%= user.city %></p>
+
             </div>
         </div>
         <% end %>
