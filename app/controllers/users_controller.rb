@@ -2,12 +2,22 @@ class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @users = User.where.not(latitude: nil, longitude: nil)
-    @markers = @users.map do |user|
-      {
-        lat: user.latitude,
-        lng: user.longitude
-      }
+
+    if params[:query].present?
+      a = params[:query].split(",").first.to_s
+          @users = User.where("city ILIKE ?", "%#{a}%") && User.where.not(latitude: nil, longitude: nil)
+          @markers = @users.map do |user|
+            {
+              lat: user.latitude,
+              lng: user.longitude
+            }
+    else
+      @users = User.where.not(latitude: nil, longitude: nil)
+          @markers = @users.map do |user|
+            {
+              lat: user.latitude,
+              lng: user.longitude
+            }
     end
   end
 
@@ -15,6 +25,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @instruments = UserInstrument.where(user_id: @user)
     @styles = UserStyle.where(user_id: @user)
+    @members = Member.where(user_id: @user)
   end
 
   def edit

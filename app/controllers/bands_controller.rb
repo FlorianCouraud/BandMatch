@@ -2,6 +2,7 @@ class BandsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
   def show
     @band = Band.find params[:id]
+    @members = Member.where(band_id: @band)
   end
 
   def edit

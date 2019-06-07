@@ -1,20 +1,37 @@
 <div class="row justify-content-center my-4">
   <div class="col-12 col-lg-7">
     <div class="card-trip m-3">
-      <img src="https://images.pexels.com/photos/2104742/pexels-photo-2104742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+      <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500">
       <div id="avatar-card">
-        <%= cl_image_tag current_user.photo, class: "card-trip-user avatar-bordered" %>
+        <%= cl_image_tag @user.photo, class: "card-trip-user avatar-bordered" %>
       </div>
       <div class="card-trip-infos">
             <div class="container text-center">
-              <h6><%= current_user.first_name %></h6>
+              <h6><%= @user.first_name %></h6>
 
 
-            <h3><%= current_user.last_name %></h3>
+            <h3><%= @user.last_name %></h3>
 
 
-            <p><%= current_user.email %></p>
-             <p><%= current_user.age %> ans</p>
+            <p><%= @user.email %></p>
+             <p><%= @user.age %> ans</p>
+
+            </div>
+
+        </div>
+      </div>
+
+<div class="card-trip m-3">
+
+      <div class="card-trip-infos">
+            <div class="container">
+              <h2><i class="fas fa-users"></i> Bands</h2>
+              <hr>
+              <ul id="instruments">
+              <% @members.each do |member| %>
+              <li><%= link_to member.band.name, band_path(member) %></li>
+              <% end  %>
+              </ul>
 
             </div>
 
@@ -25,7 +42,7 @@
 
       <div class="card-trip-infos">
             <div class="container">
-              <h2>Instruments</h2>
+              <h2><i class="fas fa-guitar"></i> Instruments</h2>
               <hr>
               <ul id="instruments">
               <% @instruments.each do |instrument| %>
@@ -42,7 +59,7 @@
 
       <div class="card-trip-infos">
             <div class="container">
-              <h2>Styles</h2>
+              <h2><i class="fas fa-music"></i> Styles</h2>
               <hr>
               <ul id="instruments">
               <% @styles.each do |style| %>
