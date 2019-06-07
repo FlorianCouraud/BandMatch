@@ -13,21 +13,26 @@
         <div class="container">
           <h2><i class="fas fa-users"></i> Members</h2>
           <hr>
-          <% @members.each do |member| %>
-          <div class="card-product">
-            <%= cl_image_tag member.user.photo %>
-            <div class="card-product-infos d-flex justify-content-between">
-              <div>
-                <h2><%= member.user.first_name %> <%= member.user.last_name %></h2>
-                <hr>
-               <%= member.user.city %>
+            <% @members.each do |member| %>
+           <%= link_to user_path(member.user) do %>
+              <div class="card-product">
+                <%= cl_image_tag member.user.photo, :transformation=>[
+                  {:width=>400, :height=>400, :gravity=>"face",  :crop=>"crop"},
+                  {:width=>200}
+                ] %>
+                <div class="card-product-infos d-flex justify-content-between">
+                  <div>
+                    <h2><%= member.user.first_name %> <%= member.user.last_name %></h2>
+                    <hr>
+                   <%= member.user.city %>
+                  </div>
+                  <div>
+
+                  </div>
+                </div>
               </div>
-              <div>
-                <%= link_to "", user_path(member.user), :class => "stretched-link" %>
-              </div>
-            </div>
-          </div>
-          <hr>
+              <hr>
+            <% end %>
           <% end  %>
         </div>
       </div>
