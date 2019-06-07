@@ -41,10 +41,10 @@ user8 = User.new(first_name: "Romain", last_name: "Trickster", age: "22", addres
 user8.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
 user8.save!
 
-user9 = User.create!(first_name: "Raphael", last_name: "Clement", age: "31", address: "142 Boulevard de la République", city: "La Ciotat", email: "rclement@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
+user9 = User.new(first_name: "Raphael", last_name: "Clement", age: "31", address: "142 Boulevard de la République", city: "La Ciotat", email: "rclement@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
 user9.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
 user9.save!
-user10 = User.create!(first_name: "Rose", last_name: "Cobain", age: "27", address: "164 rue paradis", city:"Marseille", email: "Rose-dc@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
+user10 = User.new(first_name: "Rose", last_name: "Cobain", age: "27", address: "164 rue paradis", city:"Marseille", email: "Rose-dc@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
 user10.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
 user10.save!
 user11 = User.new(first_name: "Thomas", last_name: "MP", age: "24", address: "102 rue du cimetière", city:"Saint Maximin La Sainte Baume", email: "thomas-mp@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
@@ -54,6 +54,29 @@ user12 = User.new(first_name: "Simone", last_name: "Simmons", age: "21", address
 user12.remote_photo_url = "https://cdn.mos.cms.futurecdn.net/SCC8mXUfstZk2d4afb2WDM.jpg"
 user12.save!
 puts "Finished user creation"
+
+puts "Creating bands"
+beetles = Band.create!(name: "Beetles")
+ralling = Band.create!(name: "Rawling Stones")
+bcec = Band.create!(name: "BC/EC")
+hotplay = Band.create!(name: "Hotplay")
+cactus = Band.create!(name: "Cactus")
+puts "Finished band creation"
+
+puts "Creating association between user and band"
+Member.create!(user_id: user1.id, band_id: beetles.id)
+Member.create!(user_id: user1.id, band_id: ralling.id)
+Member.create!(user_id: user2.id, band_id: beetles.id)
+Member.create!(user_id: user2.id, band_id: bcec.id)
+Member.create!(user_id: user3.id, band_id: beetles.id)
+Member.create!(user_id: user3.id, band_id: hotplay.id)
+Member.create!(user_id: user4.id, band_id: beetles.id)
+Member.create!(user_id: user4.id, band_id: cactus.id)
+Member.create!(user_id: user5.id, band_id: hotplay.id)
+Member.create!(user_id: user6.id, band_id: hotplay.id)
+Member.create!(user_id: user7.id, band_id: hotplay.id)
+Member.create!(user_id: user8.id, band_id: hotplay.id)
+puts "Finished association between user and band"
 
 puts "Creating instruments..."
 banjo = Instrument.create!(name: "Banjo")

@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @instruments = UserInstrument.where(user_id: @user)
     @styles = UserStyle.where(user_id: @user)
-
+    @members = Member.where(user_id: @user)
   end
 
   def edit
