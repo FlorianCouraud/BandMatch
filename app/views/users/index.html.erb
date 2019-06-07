@@ -13,7 +13,7 @@
         <div class="card-product">
           <img src=<%= user.photo %> >
             <div class="card-product-infos">
-              <h2><%= link_to user.first_name, user_path(user) %> <%= link_to user.last_name %></h2>
+              <h2><%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %></h2>
               <hr>
               <p><%= user.age %> ans</p>
               <%= user.city %>
