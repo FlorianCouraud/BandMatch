@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_06_102207) do
+ActiveRecord::Schema.define(version: 2019_06_07_051507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,12 +28,10 @@ ActiveRecord::Schema.define(version: 2019_06_06_102207) do
     t.string "name"
     t.string "avatar"
     t.string "photos"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "link2"
     t.string "link1"
-    t.index ["user_id"], name: "index_bands_on_user_id"
   end
 
   create_table "instruments", force: :cascade do |t|
@@ -110,7 +108,6 @@ ActiveRecord::Schema.define(version: 2019_06_06_102207) do
 
   add_foreign_key "band_styles", "bands"
   add_foreign_key "band_styles", "styles"
-  add_foreign_key "bands", "users"
   add_foreign_key "members", "bands"
   add_foreign_key "members", "users"
   add_foreign_key "messages", "users", column: "receiver_id"
