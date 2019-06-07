@@ -1,17 +1,13 @@
 import places from 'places.js';
 
-const reconfigurableOptions = () => {
 
-  type: 'city'// Search only for cities names
-
-};
-
+// Autocomplete de la homepage :
 
 const initAutocomplete = () => {
-  const addressInput = document.getElementById('user_address');
+  const addressInput = document.getElementById('search_query');
   if (addressInput) {
     places({ container: addressInput });
   }
 };
 
-export { initAutocomplete, reconfigurableOptions };
+export { initAutocomplete };
