@@ -5,12 +5,13 @@ class UsersController < ApplicationController
 
     if params[:query].present?
       a = params[:query].split(",").first.to_s
-          @users = User.where("city ILIKE ?", "%#{a}%") && User.where.not(latitude: nil, longitude: nil)
+          @users = User.where("city ILIKE ?", "%#{a}%")
           @markers = @users.map do |user|
             {
               lat: user.latitude,
               lng: user.longitude
             }
+          end
     else
       @users = User.where.not(latitude: nil, longitude: nil)
           @markers = @users.map do |user|
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
               lat: user.latitude,
               lng: user.longitude
             }
+          end
     end
   end
 

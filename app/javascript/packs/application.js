@@ -6,8 +6,6 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
 
-import { initAutocomplete, reconfigurableOptions } from 'plugins/init_autocomplete';
+import { initAutocomplete } from 'plugins/init_autocomplete';
 
 initAutocomplete();
-reconfigurableOptions();
-
