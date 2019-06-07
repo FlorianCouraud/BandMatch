@@ -9,7 +9,8 @@ class UsersController < ApplicationController
           @markers = @users.map do |user|
             {
               lat: user.latitude,
-              lng: user.longitude
+              lng: user.longitude,
+              infoWindow: render_to_string(partial: "shared/infowindow", locals: { user: user })
             }
           end
     else
@@ -17,7 +18,8 @@ class UsersController < ApplicationController
           @markers = @users.map do |user|
             {
               lat: user.latitude,
-              lng: user.longitude
+              lng: user.longitude,
+              infoWindow: render_to_string(partial: "shared/infowindow", locals: { user: user })
             }
           end
     end

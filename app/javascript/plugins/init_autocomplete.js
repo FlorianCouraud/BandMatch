@@ -1,6 +1,5 @@
 import places from 'places.js';
 
-
 // Autocomplete de la homepage :
 
 const initAutocomplete = () => {

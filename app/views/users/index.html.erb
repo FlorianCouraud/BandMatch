@@ -1,9 +1,8 @@
 <div class="paddingtop-results">
-<div class="text-center my-5">
-  <h2>Here are the musicians available near you!</h2>
-  <hr>
-</div>
-
+  <div class="text-center my-5">
+    <h2>Here are the musicians available near you!</h2>
+    <hr>
+  </div>
 </div>
 <div class="container">
   <div class="row justify-content-center">
@@ -11,16 +10,15 @@
       <div class="cards">
         <% @users.each do |user| %>
         <div class="card-product">
-          <img src=<%= user.photo %> >
-            <div class="card-product-infos">
-              <h2><%= link_to user.first_name, user_path(user) %> <%= link_to user.last_name %></h2>
-              <hr>
-              <p><%= user.age %> ans</p>
-              <%= user.city %>
-            <div class="mt-4 justify-content-center"><iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/508558983&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
+          <%= cl_image_tag user.photo %>
+          <div class="card-product-infos">
+            <h2><%= link_to user.first_name, user_path(user) %> <%= link_to user.last_name %></h2>
+            <hr>
+            <p><%= user.age %> ans</p>
+            <%= user.city %>
+            <div class="mt-4 justify-content-center"><iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src= <%= user.link1 %> ></iframe>
             </div>
-
-            </div>
+          </div>
         </div>
         <% end %>
       </div>
