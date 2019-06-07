@@ -54,6 +54,7 @@ user11.save!
 user12 = User.new(first_name: "Simone", last_name: "Simmons", age: "21", address: "21 Allée du Moulin Pinard, Limoges", city:"Limoges", email: "simsimm@gmail.com", password: "123456", avatar: "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/04/02/node_561982/40227044/public/2019/04/02/B9719112173Z.1_20190402120415_000%2BG4PDAAGEC.1-0.jpg?itok=9FGVqAPw")
 user12.remote_photo_url = "https://images.pexels.com/photos/2146525/pexels-photo-2146525.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user12.save!
+
 puts "Finished user creation"
 
 puts "Creating bands"
@@ -125,16 +126,16 @@ UserStyle.create!(user_id: user4.id, style_id: indie.id)
 UserStyle.create!(user_id: user4.id, style_id: pop.id)
 UserStyle.create!(user_id: user5.id, style_id: pop.id)
 UserStyle.create!(user_id: user5.id, style_id: rock.id)
-UserStyle.create!(user_id: user6.id, style_id: electro.id)
-UserStyle.create!(user_id: user6.id, style_id: electro.id)
-UserStyle.create!(user_id: user7.id, style_id: electro.id)
-UserStyle.create!(user_id: user7.id, style_id: electro.id)
-UserStyle.create!(user_id: user8.id, style_id: electro.id)
-UserStyle.create!(user_id: user9.id, style_id: electro.id)
+# UserStyle.create!(user_id: user6.id, style_id: electro.id)
+# UserStyle.create!(user_id: user6.id, style_id: electro.id)
+# UserStyle.create!(user_id: user7.id, style_id: electro.id)
+# UserStyle.create!(user_id: user7.id, style_id: electro.id)
+# UserStyle.create!(user_id: user8.id, style_id: electro.id)
+# UserStyle.create!(user_id: user9.id, style_id: electro.id)
 UserStyle.create!(user_id: user10.id, style_id: electro.id)
-UserStyle.create!(user_id: user11.id, style_id: electro.id)
-UserStyle.create!(user_id: user12.id, style_id: electro.id)
-UserStyle.create!(user_id: user12.id, style_id: electro.id)
+# UserStyle.create!(user_id: user11.id, style_id: electro.id)
+# UserStyle.create!(user_id: user12.id, style_id: electro.id)
+# UserStyle.create!(user_id: user12.id, style_id: electro.id)
 
 puts "Finised association between user and styles"
 
@@ -148,13 +149,13 @@ UserInstrument.create!(user_id: user3.id, instrument_id: violin.id, years_of_exp
 UserInstrument.create!(user_id: user3.id, instrument_id: harmonica.id, years_of_experience: "4")
 UserInstrument.create!(user_id: user4.id, instrument_id: piano.id, years_of_experience: "6")
 UserInstrument.create!(user_id: user5.id, instrument_id: guitar.id, years_of_experience: "2")
-UserInstrument.create!(user_id: user6.id, instrument_id: guitar.id, years_of_experience: "2")
-UserInstrument.create!(user_id: user7.id, instrument_id: guitar.id, years_of_experience: "2")
-UserInstrument.create!(user_id: user8.id, instrument_id: guitar.id, years_of_experience: "2")
-UserInstrument.create!(user_id: user9.id, instrument_id: guitar.id, years_of_experience: "2")
+# UserInstrument.create!(user_id: user6.id, instrument_id: guitar.id, years_of_experience: "2")
+# UserInstrument.create!(user_id: user7.id, instrument_id: guitar.id, years_of_experience: "2")
+# UserInstrument.create!(user_id: user8.id, instrument_id: guitar.id, years_of_experience: "2")
+# UserInstrument.create!(user_id: user9.id, instrument_id: guitar.id, years_of_experience: "2")
 UserInstrument.create!(user_id: user10.id, instrument_id: guitar.id, years_of_experience: "2")
-UserInstrument.create!(user_id: user11.id, instrument_id: guitar.id, years_of_experience: "2")
-UserInstrument.create!(user_id: user12.id, instrument_id: guitar.id, years_of_experience: "2")
+# UserInstrument.create!(user_id: user11.id, instrument_id: guitar.id, years_of_experience: "2")
+# UserInstrument.create!(user_id: user12.id, instrument_id: guitar.id, years_of_experience: "2")
 
 
 puts "Finished association between user and instrument"
@@ -162,4 +163,4 @@ puts "Finished association between user and instrument"
 
 
 
-puts "All good, ready to go !!"
+puts "All good, ready to go!!"

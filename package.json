@@ -2,13 +2,17 @@
   "name": "BandMatch",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^4.0.6",
+    "@babel/runtime": "^7.4.5",
+    "@mapbox/mapbox-gl-geocoder": "^4.4.0",
+    "@rails/webpacker": "^4.0.7",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
+    "lodash": "^4.17.11",
+    "mapbox-gl": "^1.0.0",
     "places.js": "^1.16.4",
     "popper.js": "^1.15.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.5.1"
+    "webpack-dev-server": "^3.7.0"
   }
 }
