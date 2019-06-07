@@ -2,14 +2,35 @@
   <div class="col-12 col-lg-7">
     <div class="card-trip m-3">
       <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500">
-
       <div class="card-trip-infos">
-            <div class="container text-center">
-            <h1><%= @band.name %></h1>
-
+        <div class="container text-center">
+          <h1><%= @band.name %></h1>
+        </div>
+      </div>
+    </div>
+    <div class="card-trip m-3">
+      <div class="card-trip-infos">
+        <div class="container">
+          <h2><i class="fas fa-users"></i> Members</h2>
+          <hr>
+          <% @members.each do |member| %>
+          <div class="card-product">
+            <%= cl_image_tag member.user.photo %>
+            <div class="card-product-infos d-flex justify-content-between">
+              <div>
+                <h2><%= member.user.first_name %> <%= member.user.last_name %></h2>
+                <hr>
+               <%= member.user.city %>
+              </div>
+              <div>
+                <%= link_to "", user_path(member.user), :class => "stretched-link" %>
+              </div>
             </div>
-
+          </div>
+          <hr>
+          <% end  %>
         </div>
       </div>
     </div>
   </div>
+</div>

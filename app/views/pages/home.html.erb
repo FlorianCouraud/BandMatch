@@ -1,9 +1,11 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'concert-bm.jpg' %>);">
   <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-7">
     <h1><strong>Welcome to BandMatch !</strong></h1>
     <div class="button-join">
       <p>Let's play together !</p>
-      <div class="btn-group dropright m-4">
+      <!-- <div class="btn-group dropright m-4">
         <button class="btn btn-outline-light type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Instrument ➣
         </button>
@@ -28,9 +30,9 @@
           <a class="dropdown-item" href="#">Ukulele</a>
           <a class="dropdown-item" href="#">Violin</a>
         </div>
-      </div>
+      </div> -->
     </div>
-    <div align="center">
+    <div align="center text-left">
    <!--    <div class="searchbar">
         <div class="my-4">
           <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
@@ -43,17 +45,22 @@
         </form>
       </div> -->
 <!--     </div> -->
-<%= form_tag users_path, method: :get do %>
+
+  <%= form_tag users_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
-    class: "form-control",
+    class: "form-control ",
     placeholder: "Enter your city",
     id: "search_query"
   %>
 <% end %>
+
   </div>
 </div>
-<div class="join_us">
+<!-- <div class="join_us">
   <%= link_to "Join us now", new_user_session_path, class: "nav-link btn btn-outline-light btn-block" %>
+</div> -->
+</div>
+</div>
 </div>
 </div>
