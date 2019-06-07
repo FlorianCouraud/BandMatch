@@ -29,7 +29,7 @@
               <hr>
               <ul id="instruments">
               <% @members.each do |member| %>
-              <li><%= link_to member.band.name, band_path(member) %></li>
+              <li><%= link_to member.band.name, band_path(member.band) %></li>
               <% end  %>
               </ul>
 
