@@ -1,3 +1,27 @@
 .infowindow {
+  overflow: hidden;
+  background: white;
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
 
+.infowindow img {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.infowindow a {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1;
+  line-height: 2;
+  color: black;
+  padding: 3px;
 }
