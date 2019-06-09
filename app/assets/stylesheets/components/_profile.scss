@@ -54,3 +54,31 @@
 #instruments {
   list-style-type: none;
 }
+
+.btn-message {
+  background: #d934d9;
+  background-image: -webkit-linear-gradient(top, #d934d9, #6d2bb8);
+  background-image: -moz-linear-gradient(top, #d934d9, #6d2bb8);
+  background-image: -ms-linear-gradient(top, #d934d9, #6d2bb8);
+  background-image: -o-linear-gradient(top, #d934d9, #6d2bb8);
+  background-image: linear-gradient(to bottom, #d934d9, #6d2bb8);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+
+}
+
+.btn-message:hover {
+  background: #b43cfa;
+  background-image: -webkit-linear-gradient(top, #b43cfa, #aa34d9);
+  background-image: -moz-linear-gradient(top, #b43cfa, #aa34d9);
+  background-image: -ms-linear-gradient(top, #b43cfa, #aa34d9);
+  background-image: -o-linear-gradient(top, #b43cfa, #aa34d9);
+  background-image: linear-gradient(to bottom, #b43cfa, #aa34d9);
+  text-decoration: none;
+}
