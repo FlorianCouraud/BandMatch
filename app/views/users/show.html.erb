@@ -3,30 +3,21 @@
     <div class="card-trip m-3">
       <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500">
       <div id="avatar-card">
-      <%= cl_image_tag @user.photo, class: "card-trip-user avatar-bordered" %>
-    <!--  <%= cl_image_tag @user.photo, :transformation=>[
-                  {:width=>250, :height=>250,:radius=>"max",  :crop=>"crop"}
-                ] %> -->
+        <%= cl_image_tag @user.photo, class: "card-trip-user avatar-bordered" %>
+        <!--  <%= cl_image_tag @user.photo, :transformation=>[
+        {:width=>250, :height=>250,:radius=>"max",  :crop=>"crop"}
+        ] %> -->
       </div>
-
       <div class="card-trip-infos">
-
-            <div class="container text-center">
-              <h6><%= @user.first_name %></h6>
-
-
-            <h3><%= @user.last_name %></h3>
-
-
-            <p><%= @user.email %></p>
-             <p><%= @user.age %> ans</p>
-
-            </div>
-
-          </div>
-
+        <div class="container text-center">
+          <h6><%= @user.first_name %></h6>
+          <h3><%= @user.last_name %></h3>
+          <p><%= @user.email %></p>
+          <p><%= @user.age %> ans</p>
+          <%= link_to "Message me", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post %>
+        </div>
+      </div>
     </div>
-
     <div class="card-trip m-3">
       <div class="card-trip-infos">
         <div class="container">
@@ -40,7 +31,6 @@
         </div>
       </div>
     </div>
-
     <div class="card-trip m-3">
       <div class="card-trip-infos">
         <div class="container">
@@ -81,9 +71,7 @@
         <div class="container">
           <h2>Youtube</h2>
           <hr>
-          <iframe id="ytplayer" type="text/html" width="640" height="360"
-          src="http://www.youtube.com/embed/efo9iPH6hMk?autoplay=1&origin=http://example.com"
-          frameborder="0"/>
+
         </div>
       </div>
     </div>

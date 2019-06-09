@@ -9,6 +9,7 @@
 Member.destroy_all
 Band.destroy_all
 Message.destroy_all
+Conversation.destroy_all
 UserInstrument.destroy_all
 UserStyle.destroy_all
 User.destroy_all
