@@ -15,6 +15,7 @@ class User < ApplicationRecord
   has_many :styles, through: :user_styles
   has_many :bands, through: :members
   has_many :messages
+  has_many :conversations, :foreign_key => :sender_id
 
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true
