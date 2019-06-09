@@ -3,29 +3,26 @@
 <% end %>
 <div class="container my-4">
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-8">
       <div class="my-3">
         <% @messages.each do |message| %>
         <% if message.body %>
         <% user = User.find(message.user_id) %>
-        <div class="item">
-          <div class="content">
-            <div class="header"><strong><%= user.first_name %></strong> <%= message.message_time %></div>
-            <div class="list">
-              <div class="item">
-                <i class="right triangle icon"></i>
-                <%= message.body %>
-              </div>
-            </div>
+        <div class="notification">
+          <%= cl_image_tag user.photo, :width => 50, :height => 50,:radius=>"max" %>
+          <div class="notification-content">
+            <p><strong><%= user.first_name %></strong></p>
+            <p><%= message.body %></p>
+          </div>
+          <div class="notification-actions">
+            <p><small><%= message.message_time %></small></p>
           </div>
         </div>
         <% end %>
         <% end %>
       </div>
 
-
-
-      <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
+     <!--  <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
       <div class="field">
         <%= f.text_area :body, class: "form-control" %>
       </div>
@@ -33,7 +30,21 @@
       <div class="my-2">
         <%= f.submit "Send", class: "btn-message" %>
       </div>
+      <% end %> -->
+
+      <%= form_for [@conversation, @message], html: {class: "form-inline"} do |f| %>
+      <div class="form-group">
+        <%= f.text_area :body, class: "form-control", cols:"58", rows:"2"%>
+        <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
+      </div>
+
+      <div class="form-group mx-2">
+        <%= f.submit "Send", class: "btn-message" %>
+      </div>
       <% end %>
+
+
+
 
     </div>
   </div>
