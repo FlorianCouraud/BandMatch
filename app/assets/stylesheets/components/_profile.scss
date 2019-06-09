@@ -35,8 +35,11 @@
 }
 
 .card-trip-user {
-  border-radius: 50px;
   width: 100px;
+  height: 100px;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .section-title {
