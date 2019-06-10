@@ -41,7 +41,8 @@
           <%= text_field_tag :query,params[:query], class: "form-control",placeholder: "Enter your city",id: "search_query" %>
         </div>
         <div class="mx-2">
-        <%= text_field_tag :query2, params[:query2], class: "form-control", placeholder: "Enter your instrument", id: "instrument_query" %>
+        <%=  select_tag :query2, options_for_select(@instruments.collect{ |u| [u.name] }, params[:query2]), class: "form-control"%>
+
         </div>
         <div class="mx-2">
           <%= submit_tag "Search", class:"btn-message" %>
@@ -49,6 +50,10 @@
       </div>
       <% end %>
     </div>
+
+
+
+
   </div>
 </div>
 </div>

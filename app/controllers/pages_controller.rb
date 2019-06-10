@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @instrument = Instrument.all
+    @instruments = Instrument.all
+    @users = User.all
 
   end
 end
