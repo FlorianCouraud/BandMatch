@@ -1,10 +1,8 @@
 <div class="container my-4">
   <div class="text-center"><h1>Messages</h1></div>
-      <hr>
+  <hr>
   <div class="row justify-content-center">
-
     <div class="col-12 col-lg-4">
-
       <% @conversations.each do |conversation| %>
       <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
       <% if conversation.sender_id == current_user.id %>
@@ -16,13 +14,10 @@
         <%= cl_image_tag recipient.photo, class: "avatar"%>
         <div class="notification-content">
           <p><%= link_to recipient.first_name, conversation_messages_path(conversation)%></p>
-
         </div>
       </div>
-
       <% end %>
       <% end %>
     </div>
   </div>
 </div>
-

@@ -1,6 +1,6 @@
 <div class="paddingtop-results">
   <div class="text-center my-5">
-    <h2>Here are the musicians available near you!</h2>
+    <h2>There are <%= @users.count %> musicians in <%= @a %>!</h2>
     <hr>
   </div>
 </div>
@@ -30,7 +30,9 @@
       <div
         id="map"
         style="width: 100%;
-        height: 500px;"
+        height: 500px;
+        position: sticky;
+        top: 64px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>

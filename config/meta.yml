@@ -1,7 +1,6 @@
-# config/meta.yml
 
 meta_product_name: "BandMatch"
-meta_title: "BandMatch - Meet a player. Start a Band."
-meta_description: "It's the Tinder for musicians!"
+meta_title: "BandMatch - Search for Musicians. Find a Band."
+meta_description: "We're like Tinder, but for musicians!"
 meta_image: "BandMatchLogo2.png" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards

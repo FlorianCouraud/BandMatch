@@ -11,9 +11,6 @@ class UsersController < ApplicationController
           # @users = User.where("city ILIKE ?", "%#{a}%" && "instrument == ", "%#{b}%").joins(:instruments)
           @users = User.where("city ILIKE ?", "%#{a}%").joins(:instruments).where(instruments: {name: b})
 
-
-
-
           @markers = @users.map do |user|
             {
               lat: user.latitude,
