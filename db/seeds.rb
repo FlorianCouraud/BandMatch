@@ -60,6 +60,7 @@ user13.save!
 user14 = User.new(first_name: "Amy", last_name: "Lynn", age: "24", address: "3 rue des muettes, Marseille", city:"Marseille", email: "amylynn@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/83141426&color=%23ff5500&inverse=false&auto_play=false&show_user=true")
 user14.remote_photo_url = "https://images.unsplash.com/photo-1474959783111-a0f551bdad25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
 user14.save!
+
 puts "Finished user creation"
 
 puts "Creating bands"

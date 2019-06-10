@@ -4,8 +4,8 @@ class UsersController < ApplicationController
   def index
 
     if params[:query].present?
-      a = params[:query].split(",").first.to_s
-          @users = User.where("city ILIKE ?", "%#{a}%")
+      @a = params[:query].split(",").first.to_s
+          @users = User.where("city ILIKE ?", "%#{@a}%")
           @markers = @users.map do |user|
             {
               lat: user.latitude,
