@@ -89,6 +89,7 @@ Member.create!(user_id: user6.id, band_id: hotplay.id)
 Member.create!(user_id: user7.id, band_id: hotplay.id)
 Member.create!(user_id: user8.id, band_id: acod.id)
 Member.create!(user_id: user9.id, band_id: acod.id)
+Member.create!(user_id: user9.id, band_id: gsv.id)
 Member.create!(user_id: user11.id, band_id: gsv.id)
 puts "Finished association between user and band"
 
@@ -109,10 +110,16 @@ trumpet = Instrument.create(name: "Trumpet")
 trombone = Instrument.create(name: "Trombone")
 violin = Instrument.create(name: "Violin")
 sing = Instrument.create(name: "Sing")
-voice = Instrument.create(name: "Voice")
 clear_voice = Instrument.create(name: "Clear Voice")
 black_voice = Instrument.create(name: "Black Voice")
 death_voice = Instrument.create(name: "Death Voice")
+beatbox = Instrument.create(name: "Beat Box")
+ukulele = Instrument.create(name: "Ukulele")
+djembe = Instrument.create(name: "Djembe")
+didgeridoo = Instrument.create(name: "Didgeridoo")
+organ = Instrument.create(name: "Organ")
+synthesizer = Instrument.create(name: "Synthesizer")
+
 
 puts "Finished instrument creation"
 
@@ -141,6 +148,7 @@ UserStyle.create!(user_id: user1.id, style_id: jazz.id)
 UserStyle.create!(user_id: user1.id, style_id: rock.id)
 UserStyle.create!(user_id: user1.id, style_id: country.id)
 UserStyle.create!(user_id: user2.id, style_id: rock.id)
+UserStyle.create!(user_id: user2.id, style_id: pop.id)
 UserStyle.create!(user_id: user2.id, style_id: metal.id)
 UserStyle.create!(user_id: user2.id, style_id: deathmetal.id)
 UserStyle.create!(user_id: user3.id, style_id: blues.id)
@@ -175,15 +183,18 @@ puts "Finised association between user and styles"
 
 puts "Creating the association between user and instrument"
 UserInstrument.create!(user_id: user1.id, instrument_id: banjo.id, years_of_experience: "3")
+UserInstrument.create!(user_id: user1.id, instrument_id: ukulele.id, years_of_experience: "4")
 UserInstrument.create!(user_id: user1.id, instrument_id: bass_guitar.id, years_of_experience: "2")
 UserInstrument.create!(user_id: user2.id, instrument_id: piano.id, years_of_experience: "5")
 UserInstrument.create!(user_id: user2.id, instrument_id: guitar.id, years_of_experience: "4")
+UserInstrument.create!(user_id: user2.id, instrument_id: synthesizer.id, years_of_experience: "1")
 UserInstrument.create!(user_id: user3.id, instrument_id: violin.id, years_of_experience: "5")
 UserInstrument.create!(user_id: user3.id, instrument_id: harmonica.id, years_of_experience: "4")
 UserInstrument.create!(user_id: user4.id, instrument_id: clarinet.id, years_of_experience: "6")
 UserInstrument.create!(user_id: user5.id, instrument_id: guitar.id, years_of_experience: "2")
 UserInstrument.create!(user_id: user6.id, instrument_id: guitar.id, years_of_experience: "2")
 UserInstrument.create!(user_id: user7.id, instrument_id: guitar.id, years_of_experience: "8")
+UserInstrument.create!(user_id: user7.id, instrument_id: ukulele.id, years_of_experience: "5")
 UserInstrument.create!(user_id: user8.id, instrument_id: guitar.id, years_of_experience: "8")
 UserInstrument.create!(user_id: user8.id, instrument_id: bass_guitar.id, years_of_experience: "6")
 UserInstrument.create!(user_id: user8.id, instrument_id: death_voice.id, years_of_experience: "3")
@@ -195,6 +206,8 @@ UserInstrument.create!(user_id: user12.id, instrument_id: guitar.id, years_of_ex
 UserInstrument.create!(user_id: user12.id, instrument_id: sing.id, years_of_experience: "2")
 UserInstrument.create!(user_id: user13.id, instrument_id: guitar.id, years_of_experience: "2")
 UserInstrument.create!(user_id: user13.id, instrument_id: sing.id, years_of_experience: "5")
+UserInstrument.create!(user_id: user13.id, instrument_id: ukulele.id, years_of_experience: "1")
+UserInstrument.create!(user_id: user13.id, instrument_id: synthesizer.id, years_of_experience: "4")
 
 
 
