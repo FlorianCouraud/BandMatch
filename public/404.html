@@ -1,67 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>Oops !</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+body {
+  background: 0 0;
+  height: auto;
+  font: normal normal 11px/16px Tahoma, Verdana, Arial, Sans-Serif;
+  color: #666;
+  text-shadow: 0 1px 0 #000;
+}
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+.page-loader {
+  display: none;
+}
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+.error-page {
+  background-color: #0f0f0f;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-box-shadow: inset 0 2px 5px #000, inset 0 2px 10px #000;
+  -moz-box-shadow: inset 0 2px 5px #000, inset 0 2px 10px #000;
+  box-shadow: inset 0 2px 5px #000, inset 0 2px 10px #000;
+}
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+.error-404 {
+  width: 800px;
+  height: 110px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -55px auto auto -400px;
+  overflow: hidden;
+}
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+.error-404 i {
+  display: block;
+  float: left;
+  width: 9px;
+  height: 9px;
+  margin: 0 1px 1px 0;
+  background-color: #7052BA;
+}
+
+.js .error-404 i {
+  opacity: 0;
+}
+
+.error-404 .blank {
+  background: 0 0;
+}
+
+.error-404 .blank.nf-text {
+  background-color: #fff !important;
+}
+
+.screen-reader-text {
+  font: normal normal 0/0 a;
+  text-shadow: none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+a.credit,
+a.credit:active,
+a.credit:hover {
+  color: #7052BA;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  display: block;
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+}
+
+a.credit:hover {
+  color: #555;
+}
+
+a.credit:active {
+  color: #999;
+}
+
+@media (max-width:800px) {
+  .error-404 {
+    width: 400px;
+    height: 55px;
+    margin: -28px auto auto -200px;
   }
+  .error-404 i {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+@media (max-width:400px) {
+  .error-404 {
+    width: 240px;
+    height: 33px;
+    margin: -17px auto auto -120px;
+  }
+  .error-404 i {
+    width: 2px;
+    height: 2px;
+  }
+}
+
   </style>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
+<body>
+<script>document.documentElement.className="js";</script><section class="error-page" data-author="Taufik Nurrohman" id="error-page"><h1 aria-hidden="true" class="screen-reader-text">ERROR 404 - NOT FOUND</h1><a class="credit" href="http://latitudu.com">Life is Be U to Full</a><div class="error-404"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i class="nf"></i><i></i><i class="blank"></i><i class="blank nf"></i><i class="blank"></i><i></i><i class="nf"></i><i class="nf"></i><i class="blank"></i><i></i><i class="nf"></i><i class="nf"></i><i class="blank nf"></i><i class="blank"></i><i class="blank"></i><i class="nf"></i><i class="nf"></i><i class="nf"></i><i class="blank"></i><i></i><i class="nf"></i><i class="nf"></i><i class="blank"></i><i class="blank"></i><i class="blank nf"></i><i></i><i></i><i class="nf"></i><i class="blank"></i><i class="blank nf"></i><i class="blank"></i><i class="blank"></i><i class="nf"></i><i></i><i class="nf"></i><i class="nf"></i><i class="nf"></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i class="nf"></i><i class="nf"></i><i></i><i class="nf"></i><i></i><i class="nf"></i><i></i><i></i><i class="blank nf"></i><i></i><i></i><i class="nf"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="nf"></i><i></i><i></i><i class="blank"></i><i class="nf"></i><i></i><i></i><i class="nf"></i><i></i><i class="nf"></i><i></i><i></i><i class="nf"></i><i class="blank"></i><i class="blank nf"></i><i class="blank nf"></i><i class="blank"></i><i class="nf"></i><i></i><i class="nf"></i><i class="blank"></i><i></i><i class="nf"></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i class="nf"></i><i></i><i class="nf"></i><i class="nf"></i><i></i><i class="nf"></i><i></i><i></i><i class="blank nf"></i><i></i><i></i><i class="nf"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="nf"></i><i class="nf"></i><i class="nf"></i><i class="blank"></i><i class="nf"></i><i></i><i></i><i class="nf"></i><i></i><i class="nf"></i><i></i><i></i><i class="nf"></i><i class="blank"></i><i class="blank nf"></i><i class="blank"></i><i class="nf"></i><i class="nf"></i><i></i><i class="nf"></i><i class="blank"></i><i></i><i class="nf"></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i class="nf"></i><i></i><i></i><i class="nf"></i><i></i><i class="nf"></i><i></i><i class="blank"></i><i class="blank nf"></i><i></i><i></i><i class="nf"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="nf"></i><i></i><i></i><i class="blank"></i><i class="nf"></i><i></i><i></i><i class="nf"></i><i></i><i class="nf"></i><i></i><i></i><i class="blank nf"></i><i class="blank"></i><i class="blank nf"></i><i class="blank"></i><i></i><i class="nf"></i><i></i><i class="nf"></i><i></i><i></i><i class="nf"></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i class="nf"></i><i></i><i class="blank"></i><i class="blank nf"></i><i></i><i></i><i class="nf"></i><i class="nf"></i><i class="blank"></i><i></i><i></i><i class="nf"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="nf"></i><i></i><i></i><i class="blank"></i><i></i><i class="nf"></i><i class="nf"></i><i class="blank"></i><i class="blank"></i><i></i><i class="nf"></i><i class="nf"></i><i></i><i class="blank"></i><i class="blank nf"></i><i class="blank"></i><i></i><i class="nf"></i><i></i><i class="nf"></i><i class="nf"></i><i class="nf"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i class="blank"></i><i></i><i></i><i></i><i class="blank"></i></div></section>
+<script>! function(a) {
+  var b = a(window),
+    c = a(".error-404 i"),
+    d = c.not(".blank"),
+    e = d.length,
+    f = null,
+    g = 0;
+  d.attr("data-delay", function() {
+    return Math.floor(Math.random() * e);
+  }), b.on("load", function() {
+    d.each(function() {
+      var b = a(this),
+        d = parseInt(b.data("delay"), 1);
+      f = setTimeout(function() {
+        g++, b.stop().animate({
+          opacity: 1
+        }, 600), g === e && (clearTimeout(f), setTimeout(function() {
+          c.each(function(b) {
+            "blank nf" === this.className && this.setAttribute("data-delay", b);
+            var c = a(this),
+              d = parseInt(c.data("delay"), 1);
+            setTimeout(function() {
+              c.hasClass("nf") ? c.addClass("nf-text").stop().animate({
+                opacity: 1
+              }, 800) : c.stop().animate({
+                opacity: .02
+              }, 800);
+            }, 30 * d);
+          });
+        }, 3e3));
+      }, 50 * d);
+    });
+  });
+}(jQuery);
+</script>
 </body>
 </html>
