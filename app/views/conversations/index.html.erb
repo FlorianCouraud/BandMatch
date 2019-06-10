@@ -13,7 +13,7 @@
       <% recipient = User.find(conversation.sender_id) %>
       <% end %>
       <div class="notification">
-        <%= cl_image_tag recipient.photo, :width => 50, :height => 50, :crop => :fill%>
+        <%= cl_image_tag recipient.photo, class: "avatar"%>
         <div class="notification-content">
           <p><%= link_to recipient.first_name, conversation_messages_path(conversation)%></p>
 
