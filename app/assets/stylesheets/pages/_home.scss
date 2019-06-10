@@ -11,25 +11,27 @@
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 120px;
-  font-weight: bold;
   text-align: center;
 }
 
 .banner p {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 0px;
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  padding: 0px 0px 30px;
 }
+
 .button-join {
 text-align: center;
 border-radius: 5px;
-width: 250px;
+width: 380px;
 display: block;
 margin : auto;
 }
+
 .join_us {
 text-align: center;
 border-radius: 5px;
@@ -44,3 +46,7 @@ max-height: 300px;
 overflow: scroll;
 }
 
+.body {
+    padding-top: 56px;
+    position: relative;
+}

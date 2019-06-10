@@ -1,9 +1,50 @@
-<div class="page footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="footer, links, icons" />
+
+  <link rel="stylesheet" href="components/_footer.scss">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+</head>
+
+  <body>
+
+    <!-- The content of your page would go here. -->
+
+    <footer class="footer-distributed">
+
+      <div class="footer-right">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+
+      </div>
+
+      <div class="footer-left">
+
+        <p class="footer-links">
+          <%= link_to "Home", root_path %>
+          ·
+          <a href="#">Blog</a>
+          ·
+          <a href="#">About</a>
+          ·
+          <a href="#">Contact</a>
+        </p>
+
+        <p>BandMatch is made with <i class="fas fa-heart"></i> in Marseilles</p>
+      </div>
+
+    </footer>
+
+  </body>
+
+</html>

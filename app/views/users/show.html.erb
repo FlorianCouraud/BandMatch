@@ -10,14 +10,9 @@
       </div>
       <div class="card-trip-infos">
         <div class="container text-center">
-          <h6><%= @user.first_name %></h6>
-          <h3><%= @user.last_name %></h3>
-          <p><%= @user.email %></p>
-
+          <h3><%= @user.first_name %> <%= @user.last_name %></h3>
           <p><%= @user.age %> yrs</p>
           <div class="my-3"><%= button_to "Message me",  conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post, :class => "btn-message" %></div>
-
-
         </div>
       </div>
     </div>
@@ -29,7 +24,7 @@
           <ul id="instruments">
             <% @members.each do |member| %>
             <li><%= link_to member.band.name, band_path(member.band) %></li>
-            <% end  %>
+            <% end %>
           </ul>
         </div>
       </div>
