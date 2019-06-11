@@ -22,16 +22,6 @@
         <% end %>
       </div>
 
-     <!--  <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
-      <div class="field">
-        <%= f.text_area :body, class: "form-control" %>
-      </div>
-      <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-      <div class="my-2">
-        <%= f.submit "Send", class: "btn-message" %>
-      </div>
-      <% end %> -->
-
       <%= form_for [@conversation, @message], html: {class: "form-inline"} do |f| %>
       <div class="form-group emoji-picker-container">
         <%= f.text_area :body, class: "form-control", cols:"58", rows:"2", data: { emojiable: true }%>
