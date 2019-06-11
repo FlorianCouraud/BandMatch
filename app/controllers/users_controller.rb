@@ -2,14 +2,13 @@ class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-
+      @a = params[:query].split(",").first.to_s
+      @b = params[:query2]
     if (params[:query] && params[:query2]).present?
-      a = params[:query].split(",").first.to_s
-      b = params[:query2]
 
 
           # @users = User.where("city ILIKE ?", "%#{a}%" && "instrument == ", "%#{b}%").joins(:instruments)
-          @users = User.where("city ILIKE ?", "%#{a}%").joins(:instruments).where(instruments: {name: b})
+          @users = User.where("city ILIKE ?", "%#{@a}%").joins(:instruments).where(instruments: {name: @b})
 
           @markers = @users.map do |user|
             {
