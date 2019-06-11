@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'pg_search'
+gem 'rails_emoji_picker'
 
 gem 'faker'
 gem 'autoprefixer-rails'

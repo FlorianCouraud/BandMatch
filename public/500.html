@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
-@heading-color: #ff45ae;
-@sub-heading-color: #66f38a;
-@color: #9f9f9fb3;
+
 
 .vc-container {
   display: flex;
@@ -18,8 +16,10 @@
   background: url("https://www.publicdomainpictures.net/pictures/80000/velka/red-brick-wall-clipart.jpg#.W5guDpUt1yw.link")
     center repeat;
   background-size: contain;
+  z-index: 1;
+}
 
-  &::before {
+  .vc-container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -33,7 +33,7 @@
     );
     z-index: 1;
   }
-}
+
 
 .vc-content {
   text-align: center;
@@ -45,7 +45,7 @@
 .vc-heading {
   font-size: 12.1em;
   margin: 0 0 20px;
-  color: @heading-color;
+  color: #ff45ae;
   text-shadow: 0 0 40px;
   font-weight: 100;
   animation: blink 6s ease-in-out;
@@ -54,7 +54,7 @@
 .vc-sub-heading {
   margin: 0;
   font-size: 2em;
-  color: @sub-heading-color;
+  color: #66f38a;
   text-shadow: 0 0 60px;
   font-weight: 100;
   animation: blink-sub 6s ease-in-out;
@@ -79,7 +79,7 @@
   39%,
   41%,
   100% {
-    color: @heading-color;
+    color: #ff45ae;
     text-shadow: 0 0 40px;
   }
   0%,
@@ -88,7 +88,7 @@
   36%,
   38%,
   40% {
-    color: @color;
+    color: #9f9f9fb3;
     text-shadow: none;
   }
 }
@@ -99,7 +99,7 @@
   39%,
   41%,
   100% {
-    color: @sub-heading-color;
+    color: #66f38a;
     text-shadow: 0 0 60px;
   }
   0%,
@@ -108,7 +108,7 @@
   36%,
   38%,
   40% {
-    color: @color;
+    color: #9f9f9fb3;
     text-shadow: none;
   }
 }
@@ -116,17 +116,17 @@
 @keyframes infinite-blink {
   60%,
   80% {
-    color: @color;
+    color: #9f9f9fb3;
     text-shadow: none;
   }
   70%,
   100% {
-    color: @sub-heading-color;
+    color: #66f38a;
     text-shadow: 0 0 30px;
   }
 }
 
-  </style>
+</style>
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
