@@ -82,3 +82,27 @@
   background-image: linear-gradient(to bottom, #b43cfa, #aa34d9);
   text-decoration: none;
 }
+
+
+.btn-style {
+  background: #f5f8fa;
+  background-image: -webkit-linear-gradient(top, #f5f8fa, #ffffff);
+  background-image: -moz-linear-gradient(top, #f5f8fa, #ffffff);
+  background-image: -ms-linear-gradient(top, #f5f8fa, #ffffff);
+  background-image: -o-linear-gradient(top, #f5f8fa, #ffffff);
+  background-image: linear-gradient(to bottom, #f5f8fa, #ffffff);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #9e0e9e;
+  font-size: 15px;
+  padding: 2px 15px 2px 15px;
+  border: solid #9524a6 2px;
+  text-decoration: none;
+}
+
+.btn-style:hover {
+  text-decoration: none;
+}
+
