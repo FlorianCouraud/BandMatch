@@ -1,66 +1,66 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'rocco-dipoppa-668739-unsplash.jpg' %>);">
-  <div class="container body">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-7">
-    <h1>BandMatch</h1>
-    <div class="button-join">
-      <p>Search for musicians. Find a band.</p>
-      <!-- <div class="btn-group dropright m-4">
-        <button class="btn btn-outline-light type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Instrument ➣
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Accordion</a>
-          <a class="dropdown-item" href="#">Banjo</a>
-          <a class="dropdown-item" href="#">Bass guitar</a>
-          <a class="dropdown-item" href="#">Clarinet</a>
-          <a class="dropdown-item" href="#">Didgeridoo</a>
-          <a class="dropdown-item" href="#">Drums</a>
-          <a class="dropdown-item" href="#">Flute</a>
-          <a class="dropdown-item" href="#">Guitar</a>
-          <a class="dropdown-item" href="#">Harmonica</a>
-          <a class="dropdown-item" href="#">Harp</a>
-          <a class="dropdown-item" href="#">Mandolin</a>
-          <a class="dropdown-item" href="#">Mix table</a>
-          <a class="dropdown-item" href="#">Piano</a>
-          <a class="dropdown-item" href="#">Singing</a>
-          <a class="dropdown-item" href="#">Synthesizer</a>
-          <a class="dropdown-item" href="#">Trumpet</a>
-          <a class="dropdown-item" href="#">Trombone</a>
-          <a class="dropdown-item" href="#">Ukulele</a>
-          <a class="dropdown-item" href="#">Violin</a>
-        </div>
-      </div> -->
-    </div>
-    <div align="center text-left">
-   <!--    <div class="searchbar">
-        <div class="my-4">
-          <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-          <div class="search-form-control form-group text-left">
-            <input class="form-control string required" type="text" name="search[query]" id="search_query" placeholder="Enter your address" />
-            <button name="button" type="submit" class="btn btn-flat btn-outline-light">
-            <i class="fas fa-search"></i>Search
-            </button>
+<div class="main-container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'rocco-dipoppa-668739-unsplash.jpg' %>);">
+    <div class="container body">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-7">
+          <h1>BandMatch</h1>
+          <div class="button-join">
+            <p>Search for musicians. Find a band.</p>
+            <!-- <div class="btn-group dropright m-4">
+              <button class="btn btn-outline-light type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Instrument ➣
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Accordion</a>
+                <a class="dropdown-item" href="#">Banjo</a>
+                <a class="dropdown-item" href="#">Bass guitar</a>
+                <a class="dropdown-item" href="#">Clarinet</a>
+                <a class="dropdown-item" href="#">Didgeridoo</a>
+                <a class="dropdown-item" href="#">Drums</a>
+                <a class="dropdown-item" href="#">Flute</a>
+                <a class="dropdown-item" href="#">Guitar</a>
+                <a class="dropdown-item" href="#">Harmonica</a>
+                <a class="dropdown-item" href="#">Harp</a>
+                <a class="dropdown-item" href="#">Mandolin</a>
+                <a class="dropdown-item" href="#">Mix table</a>
+                <a class="dropdown-item" href="#">Piano</a>
+                <a class="dropdown-item" href="#">Singing</a>
+                <a class="dropdown-item" href="#">Synthesizer</a>
+                <a class="dropdown-item" href="#">Trumpet</a>
+                <a class="dropdown-item" href="#">Trombone</a>
+                <a class="dropdown-item" href="#">Ukulele</a>
+                <a class="dropdown-item" href="#">Violin</a>
+              </div>
+            </div> -->
           </div>
-        </form>
-      </div> -->
-<!--     </div> -->
-
-  <%= form_tag users_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control ",
-    placeholder: "Enter your city",
-    id: "search_query"
-  %>
-<% end %>
-
+          <div align="center text-left">
+            <!--    <div class="searchbar">
+              <div class="my-4">
+                <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+                <div class="search-form-control form-group text-left">
+                  <input class="form-control string required" type="text" name="search[query]" id="search_query" placeholder="Enter your address" />
+                  <button name="button" type="submit" class="btn btn-flat btn-outline-light">
+                  <i class="fas fa-search"></i>Search
+                  </button>
+                </div>
+              </form>
+            </div> -->
+            <!--     </div> -->
+            <%= form_tag users_path, method: :get do %>
+            <%= text_field_tag :query,
+            params[:query],
+            class: "form-control ",
+            placeholder: "Enter your city",
+            id: "search_query"
+            %>
+            <% end %>
+          </div>
+        </div>
+        <!-- <div class="join_us">
+          <%= link_to "Join us now", new_user_session_path, class: "nav-link btn btn-outline-light btn-block" %>
+        </div> -->
+      </div>
+    </div>
   </div>
-</div>
-<!-- <div class="join_us">
-  <%= link_to "Join us now", new_user_session_path, class: "nav-link btn btn-outline-light btn-block" %>
-</div> -->
-</div>
-</div>
 </div>
 </div>
