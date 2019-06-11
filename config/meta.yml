@@ -2,5 +2,6 @@
 meta_product_name: "BandMatch"
 meta_title: "BandMatch - Search for Musicians. Find a Band."
 meta_description: "We're like Tinder, but for musicians!"
-meta_image: "BandMatchLogo2.png" # should exist in `app/assets/images/`
+meta_image: "BandMatchLogo2.png"
+meta_image_fb: "https://www.casimages.com/i/190611104727440998.jpg.html" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
