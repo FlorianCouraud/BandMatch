@@ -1,60 +1,28 @@
 <div class="main-container">
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'rocco-dipoppa-668739-unsplash.jpg' %>);">
-  <div class="container body">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-7">
-    <h1>BandMatch</h1>
-    <div class="button-join">
-      <p>Search for musicians. Find a band.</p>
-      <!-- <div class="btn-group dropright m-4">
-        <button class="btn btn-outline-light type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Instrument ➣
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Accordion</a>
-          <a class="dropdown-item" href="#">Banjo</a>
-          <a class="dropdown-item" href="#">Bass guitar</a>
-          <a class="dropdown-item" href="#">Clarinet</a>
-          <a class="dropdown-item" href="#">Didgeridoo</a>
-          <a class="dropdown-item" href="#">Drums</a>
-          <a class="dropdown-item" href="#">Flute</a>
-          <a class="dropdown-item" href="#">Guitar</a>
-          <a class="dropdown-item" href="#">Harmonica</a>
-          <a class="dropdown-item" href="#">Harp</a>
-          <a class="dropdown-item" href="#">Mandolin</a>
-          <a class="dropdown-item" href="#">Mix table</a>
-          <a class="dropdown-item" href="#">Piano</a>
-          <a class="dropdown-item" href="#">Singing</a>
-          <a class="dropdown-item" href="#">Synthesizer</a>
-          <a class="dropdown-item" href="#">Trumpet</a>
-          <a class="dropdown-item" href="#">Trombone</a>
-          <a class="dropdown-item" href="#">Ukulele</a>
-          <a class="dropdown-item" href="#">Violin</a>
-
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= asset_path 'rocco-dipoppa-668739-unsplash.jpg' %>);">
+    <div class="container body">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-7">
+          <h1>BandMatch</h1>
+          <div class="button-join">
+            <p>Meet musicians. Start a band.</p>
         </div>
       </div>
     </div>
-  -->
-      
-  </div>
-</div>
-</div>
-<div >
-
+    <div >
       <%= form_tag users_path, method: :get do %>
       <div class="form-row justify-content-center">
         <div class="mx-2">
           <%= text_field_tag :query,params[:query], class: "form-control",placeholder: "Enter your city",id: "search_query" %>
         </div>
         <div class="mx-2">
-        <%=  select_tag :query2, options_for_select(@instruments.collect{ |u| [u.name] }, params[:query2]), class: "form-control"%>
-
+          <%=  select_tag :query2, options_for_select(@instruments.collect{ |u| [u.name] }, params[:query2]), class: "form-control"%>
         </div>
         <div class="mx-2">
-          <%= submit_tag "Search", class:"btn-message" %>
+          <%= submit_tag "Search", class: "btn-message" %>
         </div>
       </div>
       <% end %>
     </div>
-</div>
+  </div>
 </div>

@@ -17,11 +17,20 @@
       <li class="nav-item dropdown">
         <%= cl_image_tag current_user.photo, class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
+          <%= link_to user_path(current_user), class: "dropdown-item" do %>
+          <i class="fas fa-user-circle"></i>
+          <span>Profile</span>
+          <% end %>
           <hr>
-          <%= link_to "Messages", conversations_path, class: "dropdown-item" %>
+          <%= link_to conversations_path, class: "dropdown-item " do %>
+          <i class="fas fa-inbox"></i>
+          <span>Messages</span>
+          <% end %>
           <hr>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <%= link_to destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Sign out</span>
+          <% end %>
         </div>
       </li>
       <% else %>
