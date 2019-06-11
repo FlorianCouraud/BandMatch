@@ -14,9 +14,9 @@
           <div class="card-product-infos">
             <h2><%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %></h2>
             <p><%= user.age %> yrs</p>
-           <!--  <%= user.city %>
-            <% user.instruments.each do |instrument|%>
-            <%= instrument.name %>
+<!--
+            <% user.user_instruments.each do |user_instrument|%>
+            <%= user_instrument.instrument.name %><%= user_instrument.years_of_experience %>
             <% end  %> -->
             <hr>
             <div class="mt-4 justify-content-center"><iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src= <%= user.link1 %> ></iframe>
