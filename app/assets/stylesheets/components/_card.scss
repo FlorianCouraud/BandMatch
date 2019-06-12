@@ -1,5 +1,6 @@
 .container {
   margin: 40px, 40px;
+  margin-bottom: 80px;
 }
 
 .card-product {
@@ -41,11 +42,27 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 0px 0px 0px 16px;
+  height: 150px;
 }
 
 .card-product .card-product-infos a {
   font-size: 32px
+}
+
+.card-product-instruments {
+  text-align: left;
+  /*box-shadow: 0 0 15px rgba(0,0,0,0.2);*/
+  background-color: #eaeaea;
+  border-style: solid 0.1px;
+  border-radius: 2px;
+  width: 180px;
+  height: 150px;
+  margin-left: 70px;
+}
+
+.card-product-instruments p {
+  padding: 8px;
 }
 
 .cards {
@@ -54,6 +71,11 @@
   grid-gap: 50px;
   position: relative;
 }
+
+.mt-4, .my-4 {
+  margin-top: 3.5rem !important;
+}
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
