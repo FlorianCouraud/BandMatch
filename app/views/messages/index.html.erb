@@ -5,7 +5,7 @@
   <div class="container my-4">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8">
-
+        <div class="text-center"><img src="https://lh3.googleusercontent.com/hVLWGjioN3io_eukfF0gP_YMlzpea-YugHDRcAwL6aROwM5q9szGyQwCG_MAXQyU1Dk", style="height:130px" alt=""></div>
         <div class="my-3">
           <% @messages.each do |message| %>
           <% if message.body %>
@@ -16,6 +16,7 @@
               <p><strong><%= user.first_name %></strong></p>
               <p><%= message.body %></p>
             </div>
+            <p><small><%= message.message_time %></small></p>
         </div>
         <% end  %>
         <% end  %>
