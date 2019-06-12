@@ -36,7 +36,7 @@ user5.save!
 user6 = User.new(first_name: "Jack", last_name: "Finnigan", age: "32", address: "35 rue Paradis, Marseille",city:"Marseille", email: "jckf@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34352688&color=%23ff5500&inverse=false&auto_play=false&show_user=true")
 user6.remote_photo_url = "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
 user6.save!
-user7 = User.new(first_name: "Théo", last_name: "Ensinas", age: "21", address: "64 rue de Rome, Marseille", city: "Marseille", email: "kcobain@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/88486239&color=%23ff5500&inverse=false&auto_play=false&show_user=true")
+user7 = User.new(first_name: "Théo", last_name: "Ensinas", age: "21", address: "64 rue de Rome, Marseille", city: "Marseille", email: "tensinas@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/88486239&color=%23ff5500&inverse=false&auto_play=false&show_user=true")
 user7.remote_photo_url = "https://images.unsplash.com/photo-1534385842125-8c9ad0bd123c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
 user7.save!
 user8 = User.new(first_name: "Romain", last_name: "Trickster", age: "22", address: "5 rue de la Republique, Marseille", city: "Marseille", email: "tricksters@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/218450378&color=%23ff5500&inverse=false&auto_play=false&show_user=true")
