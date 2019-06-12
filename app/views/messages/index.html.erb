@@ -10,6 +10,7 @@
         <% @messages.each do |message| %>
         <% if message.body %>
         <% user = User.find(message.user_id) %>
+
         <div class="notification">
           <%= cl_image_tag user.photo, class: "avatar" %>
           <div class="notification-content">
@@ -19,9 +20,10 @@
           <div class="notification-actions">
             <p><small><%= message.message_time %></small></p>
           </div>
-          <% end %>
-          <% end %>
         </div>
+        <% end %>
+          <% end %>
+      </div>
 
         <%= form_for [@conversation, @message], html: {class: "form-inline"} do |f| %>
         <div class="form-group">
@@ -32,6 +34,7 @@
           <%= f.submit "Send", class: "btn-message" %>
         </div>
         <% end %>
+
       </div>
     </div>
   </div>
