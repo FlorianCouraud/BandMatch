@@ -1,25 +1,19 @@
 <div class="main-container">
-  <% if @over_ten %>
-  <%= link_to 'Show Previous', '?m=all' %>
-  <% end %>
-  <div class="container my-4">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <div class="my-3">
-          <% @messages.each do |message| %>
-          <% if message.body %>
-          <% user = User.find(message.user_id) %>
-          <div class="notification">
-            <%= cl_image_tag user.photo, class: "avatar" %>
-            <div class="notification-content">
-              <p><strong><%= user.first_name %></strong></p>
-              <p><%= message.body %></p>
-            </div>
-            <div class="notification-actions">
-              <p><small><%= message.message_time %></small></p>
-            </div>
-            <% end %>
-            <% end %>
+<% if @over_ten %>
+<%= link_to 'Show Previous', '?m=all' %>
+<% end %>
+<div class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="my-3">
+        <% @messages.each do |message| %>
+        <% if message.body %>
+        <% user = User.find(message.user_id) %>
+        <div class="notification">
+          <%= cl_image_tag user.photo, class: "avatar" %>
+          <div class="notification-content">
+            <p><strong><%= user.first_name %></strong></p>
+            <p><%= message.body %></p>
           </div>
           <%= form_for [@conversation, @message], html: {class: "form-inline"} do |f| %>
           <div class="form-group">
@@ -29,8 +23,20 @@
           <div class="form-group mx-2">
             <%= f.submit "Send", class: "btn-message" %>
           </div>
-          <% end %>
         </div>
+        <% end %>
+          <% end %>
+      </div>
+
+        <%= form_for [@conversation, @message], html: {class: "form-inline"} do |f| %>
+        <div class="form-group">
+          <%= f.text_area :body, class: "form-control", cols:"58", rows:"2"%>
+          <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
+        </div>
+        <div class="form-group mx-2">
+          <%= f.submit "Send", class: "btn-message" %>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
