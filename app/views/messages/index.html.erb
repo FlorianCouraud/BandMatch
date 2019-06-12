@@ -1,44 +1,41 @@
 <div class="main-container">
-<% if @over_ten %>
-<%= link_to 'Show Previous', '?m=all' %>
-<% end %>
-<div class="container my-4">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-8">
-      <div class="my-3">
-        <% @messages.each do |message| %>
-        <% if message.body %>
-        <% user = User.find(message.user_id) %>
-        <div class="notification">
-          <%= cl_image_tag user.photo, class: "avatar" %>
-          <div class="notification-content">
-            <p><strong><%= user.first_name %></strong></p>
-            <p><%= message.body %></p>
-          </div>
-          <%= form_for [@conversation, @message], html: {class: "form-inline"} do |f| %>
-          <div class="form-group">
-            <%= f.text_area :body, class: "form-control", cols:"58", rows:"2"%>
-            <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-          </div>
-          <div class="form-group mx-2">
-            <%= f.submit "Send", class: "btn-message" %>
-          </div>
+  <% if @over_ten %>
+  <%= link_to 'Show Previous', '?m=all' %>
+  <% end %>
+  <div class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="text-center"><img src="https://lh3.googleusercontent.com/hVLWGjioN3io_eukfF0gP_YMlzpea-YugHDRcAwL6aROwM5q9szGyQwCG_MAXQyU1Dk", style="height:130px" alt=""></div>
+
+        <div class="my-3">
+          <% @messages.each do |message| %>
+          <% if message.body %>
+          <% user = User.find(message.user_id) %>
+          <div class="notification">
+            <%= cl_image_tag user.photo, class: "avatar" %>
+            <div class="notification-content">
+              <p><strong><%= user.first_name %></strong></p>
+              <p><%= message.body %></p>
+            </div>
+            <p><small><%= message.message_time %></small></p>
         </div>
-        <% end %>
-          <% end %>
+        <% end  %>
+        <% end  %>
       </div>
 
-        <%= form_for [@conversation, @message], html: {class: "form-inline"} do |f| %>
-        <div class="form-group">
-          <%= f.text_area :body, class: "form-control", cols:"58", rows:"2"%>
-          <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
+            <%= form_for [@conversation, @message], html: {class: "form-inline"} do |f| %>
+            <div class="form-group">
+              <%= f.text_area :body, class: "form-control", cols:"58", rows:"2"%>
+            </div>
+            <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
+            <div class="form-group mx-2">
+              <%= f.submit "Send", class: "btn-message" %>
+            </div>
+          <% end %>
+
         </div>
-        <div class="form-group mx-2">
-          <%= f.submit "Send", class: "btn-message" %>
-        </div>
-        <% end %>
+
       </div>
     </div>
-  </div>
-</div>
-</div>
+
+
