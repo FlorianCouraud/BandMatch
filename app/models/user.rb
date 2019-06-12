@@ -13,6 +13,7 @@ class User < ApplicationRecord
 
   has_many :user_instruments
   has_many :instruments, through: :user_instruments
+  has_many :user_styles
   has_many :styles, through: :user_styles
   has_many :bands, through: :members
   has_many :messages

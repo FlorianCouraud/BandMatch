@@ -44,6 +44,10 @@
 .card-product .card-product-infos {
   padding: 0px 0px 0px 16px;
   height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .card-product .card-product-infos a {
@@ -51,19 +55,21 @@
 }
 
 .card-product-instruments {
+  /* color: white;*/
   text-align: left;
   /*box-shadow: 0 0 15px rgba(0,0,0,0.2);*/
-  background-color: #eaeaea;
-  border-style: solid 1px;
+  border-style: solid 0.1px;
   border-radius: 2px;
   width: 180px;
-  height: 150px;
+  height: 90px;
   margin-left: 70px;
+  margin-bottom: 60px
   border-color: #7A2AD3
 }
 
 .card-product-instruments p {
-  padding: 8px;
+  padding-left: 16px;
+  padding-top: 2px;
 }
 
 .cards {
@@ -73,9 +79,9 @@
   position: relative;
 }
 
-.mt-4, .my-4 {
+/*.mt-4, .my-4 {
   margin-top: 3.5rem !important;
-}
+}*/
 
 
 // Smallest device
