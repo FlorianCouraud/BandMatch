@@ -1,16 +1,13 @@
 <div class="row justify-content-center my-4">
   <div class="col-12 col-lg-7">
     <div class="card-trip m-3">
-      <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500">
-      <div id="avatar-card">
+      <img src="<%= asset_path 'doruk-yemenici-1597090-unsplash.jpg' %>">
+        <div id="avatar-card">
         <%= cl_image_tag @user.photo, class: "card-trip-user avatar-bordered" %>
-        <!--  <%= cl_image_tag @user.photo, :transformation=>[
-        {:width=>250, :height=>250,:radius=>"max",  :crop=>"crop"}
-        ] %> -->
       </div>
       <div class="card-trip-infos">
         <div class="container text-center">
-          <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+          <h1><%= @user.first_name %> <%= @user.last_name %></h1>
           <p><%= @user.age %> yrs</p>
           <div class="my-3"><%= button_to "Message me",  conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post, :class => "btn-message" %></div>
         </div>
@@ -34,42 +31,26 @@
         <div class="container">
           <h2><i class="fas fa-guitar"></i> Instruments</h2>
           <hr>
-          <!-- <ul id="instruments"> -->
             <% @instruments.each do |instrument| %>
-            <!-- <li><%= instrument.instrument.name %></li> -->
             <div class="my-1" >
               <button class="btn-style"><%= instrument.instrument.name %></button>
             </div>
             <% end  %>
-       <!--    </ul> -->
-        </div>
-      </div>
     </div>
-    <div class="card-trip m-3">
-      <div class="card-trip-infos">
         <div class="container">
           <h2><i class="fas fa-music"></i> Styles</h2>
           <hr>
-         <!--  <ul id="instruments"> -->
             <% @styles.each do |style| %>
-           <!--  <li><%= style.style.name %></li> -->
            <div class="my-1" >
               <button class="btn-style"><%= style.style.name %></button>
             </div>
-            <% end  %>
-        <!--   </ul> -->
+            <% end %>
         </div>
       </div>
     </div>
-    <div class="card-trip m-3">
-      <div class="card-trip-infos">
         <div class="container">
           <h2>Soundcloud</h2>
-          <hr>
           <iframe width="100%" height="190" scrolling="no" frameborder="no" allow="autoplay" src= <%= @user.link1 %> ></iframe>
-          <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/632412507&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
-        </div>
-      </div>
     </div>
     <div class="card-trip m-3">
       <div class="card-trip-infos">
