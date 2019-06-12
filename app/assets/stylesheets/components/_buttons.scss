@@ -1,0 +1,16 @@
+.btn-message {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+  border-radius: 4px;
+  font-size: 17px;
+}
+
+.btn-message:hover {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 4px;
+  font-size: 17px;
+  transition: 0.8s;
+}
+
+.color-white {
+  color: white;
+}
