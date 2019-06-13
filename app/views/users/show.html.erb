@@ -1,7 +1,7 @@
 <div class="row justify-content-center my-4">
   <div class="col-12 col-lg-7">
     <div class="card-trip m-3">
-      <img src="<%= asset_path 'doruk-yemenici-1597090-unsplash.jpg' %>">
+      <img src="<%= asset_path 'color2.png' %>">
         <div id="avatar-card">
         <%= cl_image_tag @user.photo, class: "card-trip-user avatar-bordered" %>
       </div>
@@ -33,7 +33,7 @@
           <hr>
             <% @instruments.each do |instrument| %>
             <div class="my-1" >
-              <button class="btn-style"><%= instrument.instrument.name %></button>
+              <button type="button" class="btn-style" disabled><%= instrument.instrument.name %></button>
             </div>
             <% end  %>
     </div>
@@ -42,7 +42,7 @@
           <hr>
             <% @styles.each do |style| %>
            <div class="my-1" >
-              <button class="btn-style"><%= style.style.name %></button>
+              <button type="button" class="btn-style" disabled><%= style.style.name %></button>
             </div>
             <% end %>
         </div>
