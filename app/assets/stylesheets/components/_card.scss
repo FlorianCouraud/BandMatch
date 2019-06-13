@@ -55,9 +55,7 @@
 }
 
 .card-product-instruments {
-  /* color: white;*/
   text-align: left;
-  /*box-shadow: 0 0 15px rgba(0,0,0,0.2);*/
   border-style: solid 0.1px;
   border-radius: 2px;
   width: 180px;
@@ -69,7 +67,27 @@
 
 .card-product-instruments p {
   padding-left: 16px;
-  padding-top: 2px;
+/*  padding-top: 2px;*/
+  line-height: 1.1em;
+}
+
+.card-product-instruments a {
+  margin-bottom: 0;
+  margin-top: 8px;
+  line-height: 1.4em;
+  font-size: 14px;
+  opacity: .7;
+  padding-left: 16px;
+}
+
+.card-product-instruments b {
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 8px;
+  line-height: 1.4em;
+  font-size: 14px;
+  opacity: .7;
+  padding-left: 16px;
 }
 
 .cards {
@@ -78,10 +96,6 @@
   grid-gap: 50px;
   position: relative;
 }
-
-/*.mt-4, .my-4 {
-  margin-top: 3.5rem !important;
-}*/
 
 
 // Smallest device
