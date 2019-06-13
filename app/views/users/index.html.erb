@@ -48,14 +48,15 @@
               years
             <% end %></em></p>
             <% end %>
-            <p><strong>Prefered style:</strong></p>
-            <p><% user.user_styles.each do |user_style| %>
+            <br>
+            <a style="text-decoration: underline;">Preferred styles:</a>
+            <b><% user.user_styles.each do |user_style| %>
               <% if user_style == user.user_styles.last %>
               <em><%= user_style.style.name %></em>
               <% else %>
               <em><%= user_style.style.name %>, </em>
               <% end %>
-            <% end %></p>
+            <% end %></b>
           </div>
         </div>
         <% end %>
