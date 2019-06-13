@@ -18,16 +18,16 @@ Instrument.destroy_all
 puts "Beginning"
 puts "Creating users ..."
 
-user1 = User.new(first_name: "Wilfried", last_name: "Bessovi", age: "30", address: "64 avenue du Prado, Marseille", city: "Marseille", email: "wbsvnet@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/304376276&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/e_k-yLShHC8")
+user1 = User.new(first_name: "Pierre", last_name: "Henry", age: "30", address: "64 avenue du Prado, Marseille", city: "Marseille", email: "wbsvnet@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/304376276&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/e_k-yLShHC8")
 user1.remote_photo_url = "https://images.pexels.com/photos/2232981/pexels-photo-2232981.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user1.save!
-user2 = User.new(first_name: "Jessica", last_name: "Forin", age: "25", address: "49 rue de la Republique, Marseille", city: "Marseille", email: "jess.fiedler83860@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133923300&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/EaECVQmaTJc")
+user2 = User.new(first_name: "Noemie", last_name: "Forin", age: "25", address: "49 rue de la Republique, Marseille", city: "Marseille", email: "jess.fiedler83860@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133923300&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/EaECVQmaTJc")
 user2.remote_photo_url = "https://images.unsplash.com/photo-1520998590883-430e4faee99e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
 user2.save!
-user3 = User.new(first_name: "Florian", last_name: "Couraud", age: "27", address: "12 rue de Rome, Marseille", city: "Marseille", email: "f.couraud13@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/296094349&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/-w_eEYuZFZ8")
+user3 = User.new(first_name: "Charles", last_name: "Rilo", age: "27", address: "12 rue de Rome, Marseille", city: "Marseille", email: "f.couraud13@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/296094349&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/-w_eEYuZFZ8")
 user3.remote_photo_url = "https://images.pexels.com/photos/2287252/pexels-photo-2287252.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 user3.save!
-user4 = User.new(first_name: "Brice", last_name: "Bickelmann", age: "25", address: "84 Quai du Port, Marseille", city: "Marseille", email: "bickelmann.b@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/22322881&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/3XCuk5Tp45k")
+user4 = User.new(first_name: "Marc", last_name: "Fres", age: "25", address: "84 Quai du Port, Marseille", city: "Marseille", email: "bickelmann.b@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/22322881&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/3XCuk5Tp45k")
 user4.remote_photo_url = "https://cdn.pixabay.com/photo/2015/04/13/00/31/man-719821_1280.jpg"
 user4.save!
 user5 = User.new(first_name: "Toa", last_name: "Heftiba", age: "19", address: "127 avenue du Prado, Marseille", city:"Marseille", email: "toah@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/176212991&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/s6XkM9ri9io")
@@ -42,13 +42,13 @@ user7.save!
 user8 = User.new(first_name: "Romain", last_name: "Trickster", age: "22", address: "5 rue de la Republique, Marseille", city: "Marseille", email: "tricksters@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/218450378&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/MNUlWxcEM-Y")
 user8.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560155136-bm-romain.jpg"
 user8.save!
-user9 = User.new(first_name: "Raph", last_name: "ACOD", age: "31", address: "142 rue de la République, Marseille", city: "Marseille", email: "rclement@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34491533&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/qXb_K-BKAFQ")
+user9 = User.new(first_name: "Raph", last_name: "Gomez", age: "31", address: "142 rue de la République, Marseille", city: "Marseille", email: "rclement@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34491533&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/qXb_K-BKAFQ")
 user9.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560155137-bm-raphcarre.jpg"
 user9.save!
 user10 = User.new(first_name: "Rose", last_name: "Cobain", age: "27", address: "164 rue paradis, Marseille", city:"Marseille", email: "Rose-dc@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/387475886&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/xbLakVLJ1G0")
 user10.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560155136-bm-rosecarre.jpg"
 user10.save!
-user11 = User.new(first_name: "Thomas", last_name: "MP", age: "24", address: "25 Rue du Refuge, Marseille", city:"Marseille", email: "thomas-mp@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/238301520&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/Msku4xUt6jQ")
+user11 = User.new(first_name: "Thomas", last_name: "Castillo", age: "24", address: "25 Rue du Refuge, Marseille", city:"Marseille", email: "thomas-mp@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/238301520&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/Msku4xUt6jQ")
 user11.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560156023-thomasmpcarre.jpg"
 user11.save!
 user12 = User.new(first_name: "Simone", last_name: "Simmons", age: "26", address: "5 cours Mirabeau, Aix-en-Provence", city:"Aix-en-Provence", email: "simsimm@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/235290512&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/0NTs6AXPQaY")
@@ -176,7 +176,7 @@ puts "Finished association between user and styles"
 puts "Creating the association between user and instrument"
 UserInstrument.create!(user_id: user1.id, instrument_id: banjo.id, years_of_experience: "3")
 UserInstrument.create!(user_id: user1.id, instrument_id: ukulele.id, years_of_experience: "4")
-UserInstrument.create!(user_id: user1.id, instrument_id: guitar.id, years_of_experience: "4")
+UserInstrument.create!(user_id: user1.id, instrument_id: piano.id, years_of_experience: "4")
 UserInstrument.create!(user_id: user2.id, instrument_id: guitar.id, years_of_experience: "4")
 UserInstrument.create!(user_id: user2.id, instrument_id: piano.id, years_of_experience: "3")
 UserInstrument.create!(user_id: user2.id, instrument_id: synthesizer.id, years_of_experience: "1")
@@ -185,6 +185,7 @@ UserInstrument.create!(user_id: user3.id, instrument_id: harmonica.id, years_of_
 UserInstrument.create!(user_id: user3.id, instrument_id: guitar.id, years_of_experience: "4")
 UserInstrument.create!(user_id: user4.id, instrument_id: clarinet.id, years_of_experience: "6")
 UserInstrument.create!(user_id: user5.id, instrument_id: guitar.id, years_of_experience: "2")
+UserInstrument.create!(user_id: user5.id, instrument_id: ukulele.id, years_of_experience: "2")
 UserInstrument.create!(user_id: user6.id, instrument_id: guitar.id, years_of_experience: "2")
 UserInstrument.create!(user_id: user7.id, instrument_id: guitar.id, years_of_experience: "8")
 UserInstrument.create!(user_id: user7.id, instrument_id: ukulele.id, years_of_experience: "5")
