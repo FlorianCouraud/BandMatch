@@ -18,11 +18,15 @@
         <div class="container">
           <h2><i class="fas fa-users"></i> Bands</h2>
           <hr>
-          <ul id="instruments">
+
             <% @members.each do |member| %>
-            <li><%= link_to member.band.name, band_path(member.band) %></li>
-            <% end %>
-          </ul>
+          <div class="notification" style="width:300px">
+            <img src="https://images.pexels.com/photos/1309240/pexels-photo-1309240.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="avatar" alt="">
+              <div class="notification-content">
+                <p><%= link_to member.band.name, band_path(member.band) %></p>
+              </div>
+          </div>
+        <% end %>
         </div>
       </div>
     </div>
