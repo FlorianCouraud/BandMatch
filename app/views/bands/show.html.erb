@@ -25,7 +25,7 @@
             ] %>
             <div class="card-product-infos d-flex justify-content-between">
               <div>
-                <h2><%= member.user.first_name %> <%= member.user.last_name %></h2>
+                <h1><%= member.user.first_name %> <%= member.user.last_name %></h1>
                 <%= member.user.city %>
                 <div class="my-3"><%= button_to "Send message",  conversations_path(sender_id: current_user.id, recipient_id: member.user.id), method: :post, :class => "btn-message" %></div>
               </div>
@@ -33,6 +33,7 @@
               </div>
             </div>
           </div>
+          <br>
           <% end %>
           <% end  %>
         </div>
