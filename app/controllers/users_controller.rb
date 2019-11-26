@@ -3,31 +3,31 @@ class UsersController < ApplicationController
 
   def index
 
-      @a = params[:query].split(",").first.to_s
-      @b = params[:query2]
+    @a = params[:query].split(",").first.to_s
+    @b = params[:query2]
 
     if (params[:query] && params[:query2]).present?
 
 
-          # @users = User.where("city ILIKE ?", "%#{a}%" && "instrument == ", "%#{b}%").joins(:instruments)
-          @users = User.where("city ILIKE ?", "%#{@a}%").joins(:instruments).where(instruments: {name: @b})
+      # @users = User.where("city ILIKE ?", "%#{a}%" && "instrument == ", "%#{b}%").joins(:instruments)
+      @users = User.where("city ILIKE ?", "%#{@a}%").joins(:instruments).where(instruments: {name: @b})
 
-          @markers = @users.map do |user|
-            {
-              lat: user.latitude,
-              lng: user.longitude,
-              infoWindow: render_to_string(partial: "shared/infowindow", locals: { user: user })
-            }
-          end
+      @markers = @users.map do |user|
+        {
+          lat: user.latitude,
+          lng: user.longitude,
+          infoWindow: render_to_string(partial: "shared/infowindow", locals: { user: user })
+        }
+      end
     else
       @users = User.where.not(latitude: nil, longitude: nil)
-          @markers = @users.map do |user|
-            {
-              lat: user.latitude,
-              lng: user.longitude,
-              infoWindow: render_to_string(partial: "shared/infowindow", locals: { user: user })
-            }
-          end
+      @markers = @users.map do |user|
+        {
+          lat: user.latitude,
+          lng: user.longitude,
+          infoWindow: render_to_string(partial: "shared/infowindow", locals: { user: user })
+        }
+      end
     end
   end
 
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
 
   private
 
-   def user_params
+  def user_params
     params.require(:user).permit(:photo)
   end
 end

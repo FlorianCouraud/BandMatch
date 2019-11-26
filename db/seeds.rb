@@ -16,7 +16,7 @@ User.destroy_all
 Instrument.destroy_all
 
 puts "Beginning"
-puts "Creating users ..."
+puts "Creating users..."
 
 user1 = User.new(first_name: "Pierre", last_name: "Henry", age: "30", address: "64 avenue du Prado, Marseille", city: "Marseille", email: "wbsvnet@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/304376276&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/e_k-yLShHC8")
 user1.remote_photo_url = "https://images.pexels.com/photos/2232981/pexels-photo-2232981.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
@@ -39,7 +39,7 @@ user6.save!
 user7 = User.new(first_name: "Théo", last_name: "Ensinas", age: "21", address: "64 rue de Rome, Marseille", city: "Marseille", email: "kcobain@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/88486239&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/ZMJnjy6tV6c")
 user7.remote_photo_url = "https://images.unsplash.com/photo-1534385842125-8c9ad0bd123c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
 user7.save!
-user8 = User.new(first_name: "Romain", last_name: "Trickster", age: "22", address: "5 rue de la Republique, Marseille", city: "Marseille", email: "tricksters@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/218450378&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/MNUlWxcEM-Y")
+user8 = User.new(first_name: "Romain", last_name: "Trickster", age: "22", address: "5 rue de la Republique, Marseille", city: "Marseille", email: "tricksters@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/231380272&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/MNUlWxcEM-Y")
 user8.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560155136-bm-romain.jpg"
 user8.save!
 user9 = User.new(first_name: "Raph", last_name: "Gomez", age: "31", address: "142 rue de la République, Marseille", city: "Marseille", email: "rclement@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34491533&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/qXb_K-BKAFQ")
@@ -48,7 +48,7 @@ user9.save!
 user10 = User.new(first_name: "Rose", last_name: "Cobain", age: "27", address: "164 rue paradis, Marseille", city:"Marseille", email: "Rose-dc@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/387475886&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/xbLakVLJ1G0")
 user10.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560155136-bm-rosecarre.jpg"
 user10.save!
-user11 = User.new(first_name: "Thomas", last_name: "Castillo", age: "24", address: "25 Rue du Refuge, Marseille", city:"Marseille", email: "thomas-mp@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/238301520&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/Msku4xUt6jQ")
+user11 = User.new(first_name: "Thomas", last_name: "Castillo", age: "24", address: "25 Rue du Refuge, Marseille", city:"Marseille", email: "thomas-mp@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/687608977&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/Msku4xUt6jQ")
 user11.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560156023-thomasmpcarre.jpg"
 user11.save!
 user12 = User.new(first_name: "Simone", last_name: "Simmons", age: "26", address: "5 cours Mirabeau, Aix-en-Provence", city:"Aix-en-Provence", email: "simsimm@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/235290512&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/0NTs6AXPQaY")
@@ -60,6 +60,50 @@ user13.save!
 user14 = User.new(first_name: "Amy", last_name: "Lynn", age: "24", address: "3 rue des muettes, Marseille", city:"Marseille", email: "amylynn@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123564494&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/9hM6-DQDAeQ")
 user14.remote_photo_url = "https://images.unsplash.com/photo-1474959783111-a0f551bdad25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
 user14.save!
+
+
+user15 = User.new(first_name: "Jean", last_name: "Krous", age: "30", address: "64 avenue du Prado, Marseille", city: "Marseille", email: "wbsvnet@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/304376276&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/e_k-yLShHC8")
+user15.remote_photo_url = "https://images.pexels.com/photos/2232981/pexels-photo-2232981.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
+user15.save!
+user16 = User.new(first_name: "Jeanne", last_name: "Dagron", age: "25", address: "49 rue de la Republique, Marseille", city: "Marseille", email: "jess.fiedler83860@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133923300&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/EaECVQmaTJc")
+user16.remote_photo_url = "https://images.unsplash.com/photo-1520998590883-430e4faee99e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+user16.save!
+user17 = User.new(first_name: "Luc", last_name: "Garbhier", age: "27", address: "12 rue de Rome, Marseille", city: "Marseille", email: "f.couraud13@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/296094349&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/-w_eEYuZFZ8")
+user17.remote_photo_url = "https://images.pexels.com/photos/2287252/pexels-photo-2287252.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
+user17.save!
+user18 = User.new(first_name: "Kévin", last_name: "Fressinard", age: "25", address: "84 Quai du Port, Marseille", city: "Marseille", email: "bickelmann.b@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/22322881&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/3XCuk5Tp45k")
+user18.remote_photo_url = "https://cdn.pixabay.com/photo/2015/04/13/00/31/man-719821_1280.jpg"
+user18.save!
+user19 = User.new(first_name: "Lila", last_name: "Jirot", age: "19", address: "127 avenue du Prado, Marseille", city:"Marseille", email: "toah@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/176212991&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/s6XkM9ri9io")
+user19.remote_photo_url = "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+user19.save!
+user20 = User.new(first_name: "Jacques", last_name: "Pinède", age: "32", address: "35 rue Paradis, Marseille",city:"Marseille", email: "jckf@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34352688&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/r3ebOxltJ1w")
+user20.remote_photo_url = "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+user20.save!
+user21 = User.new(first_name: "Hyppolite", last_name: "Reigner", age: "21", address: "64 rue de Rome, Marseille", city: "Marseille", email: "kcobain@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/88486239&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/ZMJnjy6tV6c")
+user21.remote_photo_url = "https://images.unsplash.com/photo-1534385842125-8c9ad0bd123c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+user21.save!
+user22 = User.new(first_name: "Alexandre", last_name: "Massot", age: "22", address: "5 rue de la Republique, Marseille", city: "Marseille", email: "tricksters@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/231380272&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/MNUlWxcEM-Y")
+user22.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560155136-bm-romain.jpg"
+user22.save!
+user23 = User.new(first_name: "Raphaël", last_name: "Japrisot", age: "31", address: "142 rue de la République, Marseille", city: "Marseille", email: "rclement@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34491533&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/qXb_K-BKAFQ")
+user23.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560155137-bm-raphcarre.jpg"
+user23.save!
+user24 = User.new(first_name: "Violette", last_name: "Placa", age: "27", address: "164 rue paradis, Marseille", city:"Marseille", email: "Rose-dc@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/387475886&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/xbLakVLJ1G0")
+user24.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560155136-bm-rosecarre.jpg"
+user24.save!
+user25 = User.new(first_name: "Tom", last_name: "Castellane", age: "24", address: "25 Rue du Refuge, Marseille", city:"Marseille", email: "thomas-mp@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/687608977&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/Msku4xUt6jQ")
+user25.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560156023-thomasmpcarre.jpg"
+user25.save!
+user26 = User.new(first_name: "Sophie", last_name: "Sauveur", age: "26", address: "5 cours Mirabeau, Aix-en-Provence", city:"Aix-en-Provence", email: "simsimm@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/235290512&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/0NTs6AXPQaY")
+user26.remote_photo_url = "https://images.unsplash.com/photo-1476493279419-b785d41e38d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+user26.save!
+user27 = User.new(first_name: "Marianne", last_name: "Lamaire", age: "21", address: "3 allée des fleurs, Marseille", city:"Marseille", email: "mlem@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/262175504&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/qdGcvR-PSa4")
+user27.remote_photo_url = "https://image.noelshack.com/fichiers/2019/24/1/1560154840-bm-girl.jpg"
+user27.save!
+user28 = User.new(first_name: "Ariane", last_name: "Linay", age: "24", address: "3 rue des muettes, Marseille", city:"Marseille", email: "amylynn@gmail.com", password: "123456", link1: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123564494&color=%23ff5500&inverse=false&auto_play=false&show_user=true", link2: "https://www.youtube.com/embed/9hM6-DQDAeQ")
+user28.remote_photo_url = "https://images.unsplash.com/photo-1474959783111-a0f551bdad25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+user28.save!
 
 puts "Finished user creation"
 
