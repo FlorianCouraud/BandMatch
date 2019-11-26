@@ -9,7 +9,11 @@
         <div class="container text-center">
           <h1><%= @user.first_name %> <%= @user.last_name %></h1>
           <p><%= @user.age %> yrs</p>
-          <div class="my-3"><%= button_to "Message me", new_user_session_path, :class => "btn-message" %></div>
+          <% if current_user.nil? %>
+            <div class="my-3"><%= button_to "Message me", new_user_session_path, :class => "btn-message" %></div>
+          <% else %>
+            <div class="my-3"><%= button_to "Message me", conversations_path(sender_id: current_user.id, recipient_id: @user.id), :class => "btn-message" %></div>
+          <% end %>
         </div>
       </div>
     </div>
